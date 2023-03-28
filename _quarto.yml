@@ -4,11 +4,11 @@ project:
 
 website:
   page-footer: 
-    left: "Copyright 2022, Testy R. Testman" 
+    left: "Copyright 2023, Riya Sharma" 
     right: 
       - icon: github
         href: https://github.com/
-  title: "Aaron's Website"
+  title: "Riya's Website"
   navbar:
     left:
       - href: index.qmd
@@ -21,7 +21,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: minty
     css: styles.css
     toc: true
 
