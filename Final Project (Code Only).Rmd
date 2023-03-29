@@ -1,0 +1,211 @@
+---
+title: "Final Project Code"
+author: "Riya Sharma"
+date: "4/28/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+&nbsp;
+
+```{r setup2, echo = FALSE, include=FALSE}
+library(tidyverse)
+library(maps)
+library(tmap)
+library(tigris)
+library(ggthemes)
+library(plotly)
+library(huxtable)
+library(wbstats)
+library(rnaturalearth)
+library(kableExtra)
+
+# Data wrangling
+fresh_cache = wb_cache()
+fresh_indicators <- wb_indicators()
+my_indicators = 
+  c(emp_pop_m = "SL.EMP.TOTL.SP.MA.ZS",
+    emp_pop_f = "SL.EMP.TOTL.SP.FE.ZS",
+    gdp_capita ="NY.GDP.PCAP.CD",
+    pop = "SP.POP.TOTL")
+
+d = wb_data(my_indicators, start_date = 2010, 
+            end_date = 2020)
+
+d_long = d %>%
+  pivot_longer(c(emp_pop_f, emp_pop_m), names_to = "emp_pop", 
+               values_to = "percent_emp")
+
+country_levels = c("Nepal", "Bhutan", "Maldives", "Sri Lanka", "Bangladesh",
+                   "Afghanistan", "India", "Pakistan")
+
+```
+
+&nbsp;
+
+```{r graph1, echo=FALSE, fig.align='center'}
+py_sa = d_long %>% mutate(
+  emp_pop = recode(emp_pop, emp_pop_f = 'Female', 
+                   emp_pop_m = 'Male')) %>%
+  left_join(wb_countries(), "iso3c") %>%
+  filter(region == "South Asia") %>%
+  dplyr::mutate(country.x = 
+                  factor(country.x, levels = country_levels)) %>%
+  ggplot(aes(x = date, y = 
+               percent_emp, 
+             color = emp_pop)) +
+  geom_line(size = 1) +
+  theme_economist_white(gray_bg = FALSE) + 
+  labs(title = "Employment to Population Ratio (ages 15+)", 
+       y = "Proportion employed", 
+       x = "",
+       caption = "Data Source: ILOSTAT through World Bank") + 
+  theme(axis.text.x=element_text(color="gray25", size = 9, angle = 45, vjust = 0.5)) + 
+  theme(axis.text.y=element_text(color="gray25", size = 10, hjust = 0.75)) + 
+  theme(plot.title = element_text(hjust = 0.5, vjust = 1.5, size = 14,
+                                  color="gray25", face = "bold")) + 
+  theme(axis.title.y = element_text(size = 11, vjust = 2.5, 
+                                    face = "bold", color="gray25")) + 
+  theme(axis.title.x = element_text(hjust = 0.5, 
+                                    vjust = -1, 
+                                    face = "bold", color="gray25")) +
+  theme(plot.caption= element_text(size=8, hjust = 1)) + 
+  theme(panel.grid.minor.x=element_blank(),
+        panel.grid.major.x=element_blank()) +
+  theme(panel.grid.major.y=element_line(size = 0.25)) +
+  theme(legend.text = element_text(size = 8.5)) + 
+  theme(legend.title = element_text(size = 9.5)) +
+  theme(axis.ticks.x = element_blank()) + 
+  scale_y_continuous(labels = function(y) paste0(y, '%')) +
+  scale_x_continuous(breaks = 2010:2020) + 
+  scale_color_canva(palette = "Fresh and lively") + 
+  labs(color = "Gender") + facet_wrap(~country.x)
+
+py_sa
+```
+
+&nbsp;
+
+```{r map1, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+# 1st map - women's employment
+data("World")
+
+pe = d %>%
+  left_join(wb_countries())
+
+names(pe)[2] <- 'iso_a3'
+
+pe2020 = left_join(
+  World, 
+  pe,
+  by = "iso_a3"
+)
+
+tmap_mode("view")
+
+map1 = pe2020 %>% filter(date == 2020) %>%
+tm_shape() + 
+  tm_polygons(col = "emp_pop_f",
+              n = 5,
+              palette = "PuBuGn",
+              title = "Proportion Employed (Female)",
+              legend.format=list(
+                fun=function(x) paste0(formatC(x, digits=0, 
+                                               format="f"), "%")), breaks = c(0, 19, 38, 57, 76, 95)) + 
+  tm_layout(title = 
+              "Female Employment to Population Ratio (ages 15+, 2020)",
+            frame = FALSE,
+            title.fontface = 2, title.size = 1.5, 
+            legend.title.size = 0.9, legend.title.fontface = "bold",
+            title.position = c('left', 'top'))  +
+  tm_credits("Data source: Modeled ILO estimate from ILOSTAT database through wbstats",
+             position = c("center", "BOTTOM"), size = 0.67) + 
+  tm_layout(asp = 0)
+
+map1 + tm_view()
+```
+
+&nbsp;
+
+```{r map2, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+# 2nd map - men's employment
+tmap_mode("view")
+
+map2 = pe2020 %>% filter(date == 2020) %>%
+  tm_shape() + 
+  tm_polygons(col = "emp_pop_m",
+              n = 5,
+              palette = "PuBuGn",
+              title = "Proportion Employed (Male)",
+              legend.format=list(
+                fun=function(x) paste0(formatC(x, digits=0, 
+                                               format="f"), "%")), breaks = c(0, 19, 38, 57, 76, 95)) + 
+  tm_layout(title = 
+              "Male Employment to Population Ratio (ages 15+, 2020)",
+            frame = FALSE,
+            title.fontface = 2, title.size = 1.5, 
+            legend.title.size = 0.9, legend.title.fontface = "bold",
+            title.position = c('left', 'top'))  +
+  tm_credits("Data source: Modeled ILO estimate from ILOSTAT database through wbstats",
+             position = c("center", "BOTTOM"), size = 0.67) + 
+  tm_layout(asp = 0)
+
+map2 + tm_view()
+```
+
+&nbsp;
+
+```{r stats1, echo=FALSE, fig.align='center'}
+# descriptive stats
+library(table1)
+
+table1::label(pe$emp_pop_f) = "Proportion Employed (Women)"
+table1::label(pe$emp_pop_m) = "Proportion Employed (Men)"
+s1 = table1::table1(~emp_pop_f + emp_pop_m + pop, data = pe, topclass="Rtable1-zebra")
+t1kable(s1) %>% kable_styling(position = "center") %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>% kable_classic(full_width = F)
+```
+
+&nbsp;
+
+```{r stats2, echo=FALSE, fig.align='center'}
+p2 = pe %>%
+  filter(region == "South Asia")
+
+table1::label(p2$emp_pop_f) = "Proportion Employed\n(South Asian Women)"
+table1::label(p2$emp_pop_m) = "Proportion Employed\n(South Asian Men)"
+s2 = table1::table1(~emp_pop_f + emp_pop_m + pop, data = p2, topclass="Rtable1-zebra")
+t1kable(s2) %>% kable_styling(position = "center") %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>% kable_classic(full_width = F)
+```
+
+&nbsp;
+
+```{r model, echo=FALSE}
+# creating models to compare South Asian employment to the rest of the world
+py2_sa = d_long %>% mutate(
+  emp_pop = recode(emp_pop, emp_pop_f = 'Female', 
+                   emp_pop_m = 'Male')) %>%
+  left_join(wb_countries(), "iso3c") %>%
+  filter(region == "South Asia")
+
+p = d_long %>% mutate(
+  emp_pop = recode(emp_pop, emp_pop_f = 'Female', 
+                   emp_pop_m = 'Male')) %>%
+  left_join(wb_countries(), "iso3c")
+
+lm_sa = lm(percent_emp ~ emp_pop + pop, data = py2_sa)
+lm_p = lm(percent_emp ~ emp_pop + pop, data = p)
+
+table2 = huxreg(lm_sa, lm_p) %>% 
+  set_align(-1, 1, '.') %>%
+  theme_compact()
+
+table2 = table2 %>% 
+  set_background_color(evens, everywhere, "gray100") %>% 
+  set_background_color(odds, everywhere, "gray90")
+
+theme_article(table2)
+```
