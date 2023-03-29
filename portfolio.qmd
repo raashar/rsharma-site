@@ -2,9 +2,11 @@
 title: "Portfolio"
 ---
 
-# My Work
+## My Work
 
-## Borgen Project Articles
+### Borgen Project Articles
+
+![](borgen-logo.jpg)
 
 *As an intern for the Borgen Project, an organization dedicated to ending global poverty, I wrote articles for both Borgen Magazine and the Borgen Project's blog on global issues and efforts being made to eradicate poverty in various countries.*
 
