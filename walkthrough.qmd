@@ -1,5 +1,5 @@
 ---
-title: "Coding Sample"
+title: "Analysis Walkthrough Example"
 author: "Riya Sharma"
 format:
   html:
@@ -31,6 +31,7 @@ library(janitor)
 library(rmapshaper)
 library(here)
 library(ggthemes)
+library(tidycensus)
 options(tigris_class = "sf")
 ```
 

@@ -13,7 +13,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - academic.qmd
       - portfolio.qmd
       - walkthrough.qmd
       
