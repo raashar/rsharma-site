@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Riya Sharma">
 
-<title>Riya’s Website - Coding Sample</title>
+<title>Riya’s Website - Analysis Walkthrough Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4011,8 +4011,8 @@ vertical-align: -.125em;
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">More Stuff About Me</span></a>
+    <a class="nav-link" href="./academic.html">
+ <span class="menu-text">Academic Work</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./portfolio.html">
@@ -4020,7 +4020,7 @@ vertical-align: -.125em;
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./walkthrough.html" aria-current="page">
- <span class="menu-text">Coding Sample</span></a>
+ <span class="menu-text">Analysis Walkthrough Example</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class title="Search"></div>
@@ -4049,7 +4049,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Coding Sample</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Analysis Walkthrough Example</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -4152,7 +4152,8 @@ in your R script or .Rprofile.</code></pre>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tigris_class =</span> <span class="st">&quot;sf&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tigris_class =</span> <span class="st">&quot;sf&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <section id="introduction" class="level1">
@@ -4392,23 +4393,19 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |===                                                                   |   4%
   |                                                                            
-  |===                                                                   |   5%
-  |                                                                            
   |====                                                                  |   6%
-  |                                                                            
-  |=====                                                                 |   6%
   |                                                                            
   |=====                                                                 |   7%
   |                                                                            
-  |======                                                                |   8%
+  |=====                                                                 |   8%
   |                                                                            
-  |=======                                                               |  10%
-  |                                                                            
-  |========                                                              |  11%
+  |======                                                                |   9%
   |                                                                            
   |=========                                                             |  13%
   |                                                                            
-  |============                                                          |  17%
+  |==========                                                            |  15%
+  |                                                                            
+  |===========                                                           |  16%
   |                                                                            
   |==============                                                        |  19%
   |                                                                            
@@ -4416,41 +4413,23 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |===============                                                       |  22%
   |                                                                            
-  |===================                                                   |  27%
+  |================                                                      |  23%
+  |                                                                            
+  |====================                                                  |  29%
   |                                                                            
   |=====================                                                 |  30%
   |                                                                            
-  |======================                                                |  31%
-  |                                                                            
-  |=======================                                               |  33%
+  |========================                                              |  34%
   |                                                                            
   |=========================                                             |  36%
   |                                                                            
-  |==========================                                            |  37%
-  |                                                                            
   |============================                                          |  40%
   |                                                                            
-  |=============================                                         |  42%
+  |=================================                                     |  48%
   |                                                                            
-  |==============================                                        |  43%
+  |===================================                                   |  50%
   |                                                                            
-  |================================                                      |  46%
-  |                                                                            
-  |==================================                                    |  49%
-  |                                                                            
-  |====================================                                  |  51%
-  |                                                                            
-  |======================================                                |  54%
-  |                                                                            
-  |========================================                              |  57%
-  |                                                                            
-  |==========================================                            |  59%
-  |                                                                            
-  |===========================================                           |  62%
-  |                                                                            
-  |=============================================                         |  65%
-  |                                                                            
-  |===============================================                       |  68%
+  |===================================================================   |  95%
   |                                                                            
   |======================================================================| 100%</code></pre>
 </div>
@@ -4810,7 +4789,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
 <div class="sourceCode" id="cb39" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Coding Sample&quot;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Analysis Walkthrough Example&quot;</span></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;Riya Sharma&quot;</span></span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
@@ -4841,339 +4820,340 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmapshaper)</span>
 <span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tigris_class =</span> <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>We&#39;ll be making a few charts and maps using the <span class="in">`ggplot2`</span> and <span class="in">`tmap`</span> packages in R.</span>
-<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a>The data used for this assignment includes Georgia election results by county for U.S. Senate and Governor in 2022, President in 2020, and then some socioeconomic factors.</span>
-<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Loading the Data</span></span>
-<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a>The first step is to load in the data, which is stored in the <span class="in">`ga_votes.xlsx`</span> Excel file that&#39;s included in this repository. As you&#39;ll see if you open the spreadsheet itself, there are two tabs - one contains the senate results, and one contains the governor results.</span>
-<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a>We&#39;ll load them separately into two datasets to be used for the remainder of this assignment.</span>
-<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a><span class="co">#import the GA election data for this assignment</span></span>
-<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a><span class="co">#GA senate</span></span>
-<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">&quot;ga_votes.xlsx&quot;</span>), <span class="at">sheet =</span> <span class="st">&quot;senate&quot;</span>)</span>
-<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a><span class="co">#GA governor</span></span>
-<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">&quot;ga_votes.xlsx&quot;</span>), <span class="at">sheet =</span> <span class="st">&quot;governor&quot;</span>)</span>
-<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tigris_class =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a>We&#39;ll be making a few charts and maps using the <span class="in">`ggplot2`</span> and <span class="in">`tmap`</span> packages in R.</span>
+<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>The data used for this assignment includes Georgia election results by county for U.S. Senate and Governor in 2022, President in 2020, and then some socioeconomic factors.</span>
+<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Loading the Data</span></span>
+<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a>The first step is to load in the data, which is stored in the <span class="in">`ga_votes.xlsx`</span> Excel file that&#39;s included in this repository. As you&#39;ll see if you open the spreadsheet itself, there are two tabs - one contains the senate results, and one contains the governor results.</span>
+<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>We&#39;ll load them separately into two datasets to be used for the remainder of this assignment.</span>
+<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a><span class="co">#import the GA election data for this assignment</span></span>
+<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a><span class="co">#GA senate</span></span>
+<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">&quot;ga_votes.xlsx&quot;</span>), <span class="at">sheet =</span> <span class="st">&quot;senate&quot;</span>)</span>
+<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a><span class="co">#GA governor</span></span>
+<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">&quot;ga_votes.xlsx&quot;</span>), <span class="at">sheet =</span> <span class="st">&quot;governor&quot;</span>)</span>
 <span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a>Two columns in particular to highlight that we&#39;ll use to examine how the Republican Senate and Governor candidates did compared with former President Trump&#39;s performance in 2020:</span>
-<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`pct_r_above_trump`**. This column calculates the difference in percentage points between what the 2022 Republican candidate got (<span class="in">`pct_r_2022`</span>) and what Trump got two years earlier (<span class="in">`pct_r_2020`</span>). A negative value means the candidate did worse than Trump, a positive value means they did better.</span>
-<span id="cb39-67"><a href="#cb39-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-68"><a href="#cb39-68" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`is_r_above_trump`**. This companion columns is a so-called &quot;flag&quot; column, which provides a Yes/No as to whether the Republican candidate did better or worse than Trump. In other words, is the <span class="in">`pct_r_above_trump`</span> value positive or negative.</span>
-<span id="cb39-69"><a href="#cb39-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-70"><a href="#cb39-70" aria-hidden="true" tabindex="-1"></a><span class="fu"># Charts</span></span>
-<span id="cb39-71"><a href="#cb39-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-72"><a href="#cb39-72" aria-hidden="true" tabindex="-1"></a>*For this section use the `ggplot2` package to create your charts.*</span>
-<span id="cb39-73"><a href="#cb39-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-74"><a href="#cb39-74" aria-hidden="true" tabindex="-1"></a>**1)**</span>
-<span id="cb39-75"><a href="#cb39-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-76"><a href="#cb39-76" aria-hidden="true" tabindex="-1"></a>For the Senate race, we will create a column/bar chart that shows how many counties the Republican candidate did better vs. worse than Trump.</span>
-<span id="cb39-77"><a href="#cb39-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-80"><a href="#cb39-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-81"><a href="#cb39-81" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-82"><a href="#cb39-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb39-83"><a href="#cb39-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_r_above_trump_new =</span> <span class="fu">ifelse</span>(is_r_above_trump<span class="sc">==</span><span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Better&quot;</span>, <span class="st">&quot;Worse&quot;</span>)</span>
-<span id="cb39-84"><a href="#cb39-84" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb39-85"><a href="#cb39-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-86"><a href="#cb39-86" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">=</span> <span class="fu">ggplot</span>(senate_results, <span class="fu">aes</span>(<span class="at">x =</span> is_r_above_trump_new)) <span class="sc">+</span> </span>
-<span id="cb39-87"><a href="#cb39-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-88"><a href="#cb39-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Performance&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-89"><a href="#cb39-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-90"><a href="#cb39-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Republican senate candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-91"><a href="#cb39-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-92"><a href="#cb39-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-93"><a href="#cb39-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-94"><a href="#cb39-94" aria-hidden="true" tabindex="-1"></a>plot1</span>
-<span id="cb39-95"><a href="#cb39-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-96"><a href="#cb39-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-97"><a href="#cb39-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-98"><a href="#cb39-98" aria-hidden="true" tabindex="-1"></a>**2)**</span>
-<span id="cb39-99"><a href="#cb39-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-100"><a href="#cb39-100" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 1, just this time for the race for Governor.</span>
-<span id="cb39-101"><a href="#cb39-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-104"><a href="#cb39-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-105"><a href="#cb39-105" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-106"><a href="#cb39-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb39-107"><a href="#cb39-107" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_r_above_trump_new =</span> <span class="fu">ifelse</span>(is_r_above_trump<span class="sc">==</span><span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Better&quot;</span>, <span class="st">&quot;Worse&quot;</span>)</span>
-<span id="cb39-108"><a href="#cb39-108" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb39-109"><a href="#cb39-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-110"><a href="#cb39-110" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">=</span> <span class="fu">ggplot</span>(governor_results, <span class="fu">aes</span>(<span class="at">x =</span> is_r_above_trump_new)) <span class="sc">+</span> </span>
-<span id="cb39-111"><a href="#cb39-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-112"><a href="#cb39-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Performance&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-113"><a href="#cb39-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-114"><a href="#cb39-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Republican governor candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-115"><a href="#cb39-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-116"><a href="#cb39-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-117"><a href="#cb39-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-118"><a href="#cb39-118" aria-hidden="true" tabindex="-1"></a>plot2</span>
-<span id="cb39-119"><a href="#cb39-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a>Two columns in particular to highlight that we&#39;ll use to examine how the Republican Senate and Governor candidates did compared with former President Trump&#39;s performance in 2020:</span>
+<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-67"><a href="#cb39-67" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`pct_r_above_trump`**. This column calculates the difference in percentage points between what the 2022 Republican candidate got (<span class="in">`pct_r_2022`</span>) and what Trump got two years earlier (<span class="in">`pct_r_2020`</span>). A negative value means the candidate did worse than Trump, a positive value means they did better.</span>
+<span id="cb39-68"><a href="#cb39-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-69"><a href="#cb39-69" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`is_r_above_trump`**. This companion columns is a so-called &quot;flag&quot; column, which provides a Yes/No as to whether the Republican candidate did better or worse than Trump. In other words, is the <span class="in">`pct_r_above_trump`</span> value positive or negative.</span>
+<span id="cb39-70"><a href="#cb39-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-71"><a href="#cb39-71" aria-hidden="true" tabindex="-1"></a><span class="fu"># Charts</span></span>
+<span id="cb39-72"><a href="#cb39-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-73"><a href="#cb39-73" aria-hidden="true" tabindex="-1"></a>*For this section use the `ggplot2` package to create your charts.*</span>
+<span id="cb39-74"><a href="#cb39-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-75"><a href="#cb39-75" aria-hidden="true" tabindex="-1"></a>**1)**</span>
+<span id="cb39-76"><a href="#cb39-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-77"><a href="#cb39-77" aria-hidden="true" tabindex="-1"></a>For the Senate race, we will create a column/bar chart that shows how many counties the Republican candidate did better vs. worse than Trump.</span>
+<span id="cb39-78"><a href="#cb39-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-81"><a href="#cb39-81" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-82"><a href="#cb39-82" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-83"><a href="#cb39-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb39-84"><a href="#cb39-84" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_r_above_trump_new =</span> <span class="fu">ifelse</span>(is_r_above_trump<span class="sc">==</span><span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Better&quot;</span>, <span class="st">&quot;Worse&quot;</span>)</span>
+<span id="cb39-85"><a href="#cb39-85" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb39-86"><a href="#cb39-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-87"><a href="#cb39-87" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">=</span> <span class="fu">ggplot</span>(senate_results, <span class="fu">aes</span>(<span class="at">x =</span> is_r_above_trump_new)) <span class="sc">+</span> </span>
+<span id="cb39-88"><a href="#cb39-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-89"><a href="#cb39-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Performance&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-90"><a href="#cb39-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-91"><a href="#cb39-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Republican senate candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-92"><a href="#cb39-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-93"><a href="#cb39-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-94"><a href="#cb39-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-95"><a href="#cb39-95" aria-hidden="true" tabindex="-1"></a>plot1</span>
+<span id="cb39-96"><a href="#cb39-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-97"><a href="#cb39-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-98"><a href="#cb39-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-99"><a href="#cb39-99" aria-hidden="true" tabindex="-1"></a>**2)**</span>
+<span id="cb39-100"><a href="#cb39-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-101"><a href="#cb39-101" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 1, just this time for the race for Governor.</span>
+<span id="cb39-102"><a href="#cb39-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-105"><a href="#cb39-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-106"><a href="#cb39-106" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-107"><a href="#cb39-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb39-108"><a href="#cb39-108" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_r_above_trump_new =</span> <span class="fu">ifelse</span>(is_r_above_trump<span class="sc">==</span><span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Better&quot;</span>, <span class="st">&quot;Worse&quot;</span>)</span>
+<span id="cb39-109"><a href="#cb39-109" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb39-110"><a href="#cb39-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-111"><a href="#cb39-111" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">=</span> <span class="fu">ggplot</span>(governor_results, <span class="fu">aes</span>(<span class="at">x =</span> is_r_above_trump_new)) <span class="sc">+</span> </span>
+<span id="cb39-112"><a href="#cb39-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-113"><a href="#cb39-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Performance&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-114"><a href="#cb39-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-115"><a href="#cb39-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Republican governor candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-116"><a href="#cb39-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-117"><a href="#cb39-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-118"><a href="#cb39-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-119"><a href="#cb39-119" aria-hidden="true" tabindex="-1"></a>plot2</span>
 <span id="cb39-120"><a href="#cb39-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-121"><a href="#cb39-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-122"><a href="#cb39-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-123"><a href="#cb39-123" aria-hidden="true" tabindex="-1"></a>**3)**</span>
-<span id="cb39-124"><a href="#cb39-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-125"><a href="#cb39-125" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a chart that shows the top 10 biggest drops between the Republican candidate and Trump (i.e. the 10 counties with the most substantial negative numbers in <span class="in">`pct_r_above_trump`</span>). Remember that you can slice off a certain number of rows using the <span class="in">`head()`</span> function, i.e. <span class="in">`head(5),`</span> <span class="in">`head(20)`</span>, etc.</span>
-<span id="cb39-126"><a href="#cb39-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-127"><a href="#cb39-127" aria-hidden="true" tabindex="-1"></a>The chart should be sorted from the biggest drop to the smallest among the top 10 counties.</span>
-<span id="cb39-128"><a href="#cb39-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-131"><a href="#cb39-131" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-132"><a href="#cb39-132" aria-hidden="true" tabindex="-1"></a>senate_drops <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-133"><a href="#cb39-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
-<span id="cb39-134"><a href="#cb39-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pct_r_above_trump =</span> pct_r_above_trump) <span class="sc">%&gt;%</span></span>
-<span id="cb39-135"><a href="#cb39-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_r_above_trump) <span class="sc">%&gt;%</span></span>
-<span id="cb39-136"><a href="#cb39-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
-<span id="cb39-137"><a href="#cb39-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-138"><a href="#cb39-138" aria-hidden="true" tabindex="-1"></a>plot3 <span class="ot">=</span> senate_drops <span class="sc">%&gt;%</span></span>
-<span id="cb39-139"><a href="#cb39-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_r_above_trump) <span class="sc">%&gt;%</span></span>
-<span id="cb39-140"><a href="#cb39-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, <span class="fu">desc</span>(pct_r_above_trump)), <span class="at">y =</span> pct_r_above_trump)) <span class="sc">+</span> </span>
-<span id="cb39-141"><a href="#cb39-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-142"><a href="#cb39-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb39-143"><a href="#cb39-143" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-144"><a href="#cb39-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Percentage&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-145"><a href="#cb39-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest drops between Republican candidates</span><span class="sc">\n</span><span class="st">and Trump in GA counties (Top 10)&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-146"><a href="#cb39-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-147"><a href="#cb39-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-148"><a href="#cb39-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-149"><a href="#cb39-149" aria-hidden="true" tabindex="-1"></a>plot3</span>
-<span id="cb39-150"><a href="#cb39-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-151"><a href="#cb39-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-152"><a href="#cb39-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-153"><a href="#cb39-153" aria-hidden="true" tabindex="-1"></a>**4)**</span>
-<span id="cb39-154"><a href="#cb39-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-155"><a href="#cb39-155" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a chart that shows the top 10 counties highest margins of victory for the Democratic candidate. To do that we&#39;ll need to compare the Democratic candidate&#39;s percentage (pct_d<span class="sc">\_</span>2022) with the Republican&#39;s (pct_r<span class="sc">\_</span>2022) to calculate the margin of victory for each county.</span>
-<span id="cb39-156"><a href="#cb39-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-159"><a href="#cb39-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-160"><a href="#cb39-160" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-161"><a href="#cb39-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb39-162"><a href="#cb39-162" aria-hidden="true" tabindex="-1"></a>    <span class="at">d_margin =</span> pct_d_2022 <span class="sc">-</span> pct_r_2022</span>
-<span id="cb39-163"><a href="#cb39-163" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb39-164"><a href="#cb39-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-165"><a href="#cb39-165" aria-hidden="true" tabindex="-1"></a>dem_margin_s <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-166"><a href="#cb39-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
-<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">d_margin =</span> d_margin) <span class="sc">%&gt;%</span></span>
-<span id="cb39-168"><a href="#cb39-168" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-169"><a href="#cb39-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
-<span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-171"><a href="#cb39-171" aria-hidden="true" tabindex="-1"></a>plot4 <span class="ot">=</span> dem_margin_s <span class="sc">%&gt;%</span></span>
-<span id="cb39-172"><a href="#cb39-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-173"><a href="#cb39-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, d_margin), <span class="at">y =</span> d_margin)) <span class="sc">+</span> </span>
-<span id="cb39-174"><a href="#cb39-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-175"><a href="#cb39-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb39-176"><a href="#cb39-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-177"><a href="#cb39-177" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Democratic margin of victory percentage&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-178"><a href="#cb39-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest Democratic margins of victory</span><span class="sc">\n</span><span class="st">for senate race in GA counties (Top 10)&quot;</span>,</span>
-<span id="cb39-179"><a href="#cb39-179" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-180"><a href="#cb39-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-181"><a href="#cb39-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-182"><a href="#cb39-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-183"><a href="#cb39-183" aria-hidden="true" tabindex="-1"></a>plot4</span>
-<span id="cb39-184"><a href="#cb39-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-185"><a href="#cb39-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-186"><a href="#cb39-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-187"><a href="#cb39-187" aria-hidden="true" tabindex="-1"></a>**5)**</span>
-<span id="cb39-188"><a href="#cb39-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-189"><a href="#cb39-189" aria-hidden="true" tabindex="-1"></a>Now do the same as Part 4, only this time for the race for Governor instead.</span>
-<span id="cb39-190"><a href="#cb39-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-193"><a href="#cb39-193" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-194"><a href="#cb39-194" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-195"><a href="#cb39-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb39-196"><a href="#cb39-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">d_margin =</span> pct_d_2022 <span class="sc">-</span> pct_r_2022</span>
-<span id="cb39-197"><a href="#cb39-197" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb39-198"><a href="#cb39-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-199"><a href="#cb39-199" aria-hidden="true" tabindex="-1"></a>dem_margin_g <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-200"><a href="#cb39-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
-<span id="cb39-201"><a href="#cb39-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">d_margin =</span> d_margin) <span class="sc">%&gt;%</span></span>
-<span id="cb39-202"><a href="#cb39-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-203"><a href="#cb39-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
-<span id="cb39-204"><a href="#cb39-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-205"><a href="#cb39-205" aria-hidden="true" tabindex="-1"></a>plot5 <span class="ot">=</span> dem_margin_g <span class="sc">%&gt;%</span></span>
-<span id="cb39-206"><a href="#cb39-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-207"><a href="#cb39-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, d_margin), <span class="at">y =</span> d_margin)) <span class="sc">+</span> </span>
-<span id="cb39-208"><a href="#cb39-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-209"><a href="#cb39-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb39-210"><a href="#cb39-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-211"><a href="#cb39-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Democratic margin of victory percentage&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-212"><a href="#cb39-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest Democratic margins of victory</span><span class="sc">\n</span><span class="st">for governor race in GA counties (Top 10)&quot;</span>,</span>
-<span id="cb39-213"><a href="#cb39-213" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-214"><a href="#cb39-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-215"><a href="#cb39-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-216"><a href="#cb39-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-217"><a href="#cb39-217" aria-hidden="true" tabindex="-1"></a>plot5</span>
-<span id="cb39-218"><a href="#cb39-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-219"><a href="#cb39-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-220"><a href="#cb39-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-221"><a href="#cb39-221" aria-hidden="true" tabindex="-1"></a>**6)**</span>
-<span id="cb39-222"><a href="#cb39-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-223"><a href="#cb39-223" aria-hidden="true" tabindex="-1"></a>Now, we&#39;ll determine the top 10 counties with the biggest differences between what the Republican candidate for Governor received and what the Senate candidate received.</span>
-<span id="cb39-224"><a href="#cb39-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-225"><a href="#cb39-225" aria-hidden="true" tabindex="-1"></a>(Note that to accomplish this you&#39;ll have to first run a join that merges the two datasets, so that you have both the senate and governor version of the <span class="in">`pct_r_2022`</span> column in the same table.)</span>
-<span id="cb39-226"><a href="#cb39-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-229"><a href="#cb39-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-230"><a href="#cb39-230" aria-hidden="true" tabindex="-1"></a><span class="co"># .x are senate results; .y are governor results</span></span>
-<span id="cb39-231"><a href="#cb39-231" aria-hidden="true" tabindex="-1"></a>sen_gov_results <span class="ot">=</span> <span class="fu">inner_join</span>(senate_results, governor_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;county&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
-<span id="cb39-232"><a href="#cb39-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-233"><a href="#cb39-233" aria-hidden="true" tabindex="-1"></a>sen_gov_results <span class="ot">=</span> sen_gov_results <span class="sc">%&gt;%</span> </span>
-<span id="cb39-234"><a href="#cb39-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct_r_diff =</span> pct_r_2022.y <span class="sc">-</span> pct_r_2022.x)</span>
-<span id="cb39-235"><a href="#cb39-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-236"><a href="#cb39-236" aria-hidden="true" tabindex="-1"></a>r_diff <span class="ot">=</span> sen_gov_results <span class="sc">%&gt;%</span></span>
-<span id="cb39-237"><a href="#cb39-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
-<span id="cb39-238"><a href="#cb39-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pct_r_diff =</span> pct_r_diff) <span class="sc">%&gt;%</span></span>
-<span id="cb39-239"><a href="#cb39-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_r_diff)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-240"><a href="#cb39-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
-<span id="cb39-241"><a href="#cb39-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-242"><a href="#cb39-242" aria-hidden="true" tabindex="-1"></a>plot6 <span class="ot">=</span> r_diff <span class="sc">%&gt;%</span></span>
-<span id="cb39-243"><a href="#cb39-243" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_r_diff)) <span class="sc">%&gt;%</span></span>
-<span id="cb39-244"><a href="#cb39-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, pct_r_diff), <span class="at">y =</span> pct_r_diff)) <span class="sc">+</span> </span>
-<span id="cb39-245"><a href="#cb39-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-246"><a href="#cb39-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb39-247"><a href="#cb39-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-248"><a href="#cb39-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Percent difference&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-249"><a href="#cb39-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Pct differences between Republican senate</span><span class="sc">\n</span><span class="st">and governor candidates in GA counties (Top 10)&quot;</span>,</span>
-<span id="cb39-250"><a href="#cb39-250" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-251"><a href="#cb39-251" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
-<span id="cb39-252"><a href="#cb39-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
-<span id="cb39-253"><a href="#cb39-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-254"><a href="#cb39-254" aria-hidden="true" tabindex="-1"></a>plot6</span>
-<span id="cb39-255"><a href="#cb39-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-256"><a href="#cb39-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-257"><a href="#cb39-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-258"><a href="#cb39-258" aria-hidden="true" tabindex="-1"></a><span class="fu"># Maps</span></span>
-<span id="cb39-259"><a href="#cb39-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-260"><a href="#cb39-260" aria-hidden="true" tabindex="-1"></a>*For this section we&#39;ll use the `tmap` package to create your charts.*</span>
-<span id="cb39-261"><a href="#cb39-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-262"><a href="#cb39-262" aria-hidden="true" tabindex="-1"></a>To help start things out, we&#39;re going to download a geospatial/map dataset with the county boundaries for Georgia. We&#39;ll use the <span class="in">`tigris`</span> package to do this.</span>
-<span id="cb39-263"><a href="#cb39-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-266"><a href="#cb39-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-267"><a href="#cb39-267" aria-hidden="true" tabindex="-1"></a>counties_geo <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">counties</span>(<span class="at">state =</span> <span class="st">&quot;GA&quot;</span>, <span class="at">resolution =</span> <span class="st">&quot;20m&quot;</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb39-268"><a href="#cb39-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-269"><a href="#cb39-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-270"><a href="#cb39-270" aria-hidden="true" tabindex="-1"></a>Now let&#39;s take a look at what we have, by mapping out the polygons of the Georgia counties using the tmap package.</span>
-<span id="cb39-271"><a href="#cb39-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-274"><a href="#cb39-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-275"><a href="#cb39-275" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(counties_geo) <span class="sc">+</span> </span>
-<span id="cb39-276"><a href="#cb39-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-277"><a href="#cb39-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-121"><a href="#cb39-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-122"><a href="#cb39-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-123"><a href="#cb39-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-124"><a href="#cb39-124" aria-hidden="true" tabindex="-1"></a>**3)**</span>
+<span id="cb39-125"><a href="#cb39-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-126"><a href="#cb39-126" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a chart that shows the top 10 biggest drops between the Republican candidate and Trump (i.e. the 10 counties with the most substantial negative numbers in <span class="in">`pct_r_above_trump`</span>). Remember that you can slice off a certain number of rows using the <span class="in">`head()`</span> function, i.e. <span class="in">`head(5),`</span> <span class="in">`head(20)`</span>, etc.</span>
+<span id="cb39-127"><a href="#cb39-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-128"><a href="#cb39-128" aria-hidden="true" tabindex="-1"></a>The chart should be sorted from the biggest drop to the smallest among the top 10 counties.</span>
+<span id="cb39-129"><a href="#cb39-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-132"><a href="#cb39-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-133"><a href="#cb39-133" aria-hidden="true" tabindex="-1"></a>senate_drops <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-134"><a href="#cb39-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
+<span id="cb39-135"><a href="#cb39-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pct_r_above_trump =</span> pct_r_above_trump) <span class="sc">%&gt;%</span></span>
+<span id="cb39-136"><a href="#cb39-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_r_above_trump) <span class="sc">%&gt;%</span></span>
+<span id="cb39-137"><a href="#cb39-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb39-138"><a href="#cb39-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-139"><a href="#cb39-139" aria-hidden="true" tabindex="-1"></a>plot3 <span class="ot">=</span> senate_drops <span class="sc">%&gt;%</span></span>
+<span id="cb39-140"><a href="#cb39-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_r_above_trump) <span class="sc">%&gt;%</span></span>
+<span id="cb39-141"><a href="#cb39-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, <span class="fu">desc</span>(pct_r_above_trump)), <span class="at">y =</span> pct_r_above_trump)) <span class="sc">+</span> </span>
+<span id="cb39-142"><a href="#cb39-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-143"><a href="#cb39-143" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb39-144"><a href="#cb39-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-145"><a href="#cb39-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Percentage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-146"><a href="#cb39-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest drops between Republican candidates</span><span class="sc">\n</span><span class="st">and Trump in GA counties (Top 10)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-147"><a href="#cb39-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-148"><a href="#cb39-148" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-149"><a href="#cb39-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-150"><a href="#cb39-150" aria-hidden="true" tabindex="-1"></a>plot3</span>
+<span id="cb39-151"><a href="#cb39-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-152"><a href="#cb39-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-153"><a href="#cb39-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-154"><a href="#cb39-154" aria-hidden="true" tabindex="-1"></a>**4)**</span>
+<span id="cb39-155"><a href="#cb39-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-156"><a href="#cb39-156" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a chart that shows the top 10 counties highest margins of victory for the Democratic candidate. To do that we&#39;ll need to compare the Democratic candidate&#39;s percentage (pct_d<span class="sc">\_</span>2022) with the Republican&#39;s (pct_r<span class="sc">\_</span>2022) to calculate the margin of victory for each county.</span>
+<span id="cb39-157"><a href="#cb39-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-160"><a href="#cb39-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-161"><a href="#cb39-161" aria-hidden="true" tabindex="-1"></a>senate_results <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-162"><a href="#cb39-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb39-163"><a href="#cb39-163" aria-hidden="true" tabindex="-1"></a>    <span class="at">d_margin =</span> pct_d_2022 <span class="sc">-</span> pct_r_2022</span>
+<span id="cb39-164"><a href="#cb39-164" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb39-165"><a href="#cb39-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-166"><a href="#cb39-166" aria-hidden="true" tabindex="-1"></a>dem_margin_s <span class="ot">=</span> senate_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
+<span id="cb39-168"><a href="#cb39-168" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">d_margin =</span> d_margin) <span class="sc">%&gt;%</span></span>
+<span id="cb39-169"><a href="#cb39-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb39-171"><a href="#cb39-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-172"><a href="#cb39-172" aria-hidden="true" tabindex="-1"></a>plot4 <span class="ot">=</span> dem_margin_s <span class="sc">%&gt;%</span></span>
+<span id="cb39-173"><a href="#cb39-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-174"><a href="#cb39-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, d_margin), <span class="at">y =</span> d_margin)) <span class="sc">+</span> </span>
+<span id="cb39-175"><a href="#cb39-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-176"><a href="#cb39-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb39-177"><a href="#cb39-177" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-178"><a href="#cb39-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Democratic margin of victory percentage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-179"><a href="#cb39-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest Democratic margins of victory</span><span class="sc">\n</span><span class="st">for senate race in GA counties (Top 10)&quot;</span>,</span>
+<span id="cb39-180"><a href="#cb39-180" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-181"><a href="#cb39-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-182"><a href="#cb39-182" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-183"><a href="#cb39-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-184"><a href="#cb39-184" aria-hidden="true" tabindex="-1"></a>plot4</span>
+<span id="cb39-185"><a href="#cb39-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-186"><a href="#cb39-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-187"><a href="#cb39-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-188"><a href="#cb39-188" aria-hidden="true" tabindex="-1"></a>**5)**</span>
+<span id="cb39-189"><a href="#cb39-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-190"><a href="#cb39-190" aria-hidden="true" tabindex="-1"></a>Now do the same as Part 4, only this time for the race for Governor instead.</span>
+<span id="cb39-191"><a href="#cb39-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-194"><a href="#cb39-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-195"><a href="#cb39-195" aria-hidden="true" tabindex="-1"></a>governor_results <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-196"><a href="#cb39-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb39-197"><a href="#cb39-197" aria-hidden="true" tabindex="-1"></a>    <span class="at">d_margin =</span> pct_d_2022 <span class="sc">-</span> pct_r_2022</span>
+<span id="cb39-198"><a href="#cb39-198" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb39-199"><a href="#cb39-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-200"><a href="#cb39-200" aria-hidden="true" tabindex="-1"></a>dem_margin_g <span class="ot">=</span> governor_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-201"><a href="#cb39-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
+<span id="cb39-202"><a href="#cb39-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">d_margin =</span> d_margin) <span class="sc">%&gt;%</span></span>
+<span id="cb39-203"><a href="#cb39-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-204"><a href="#cb39-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb39-205"><a href="#cb39-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-206"><a href="#cb39-206" aria-hidden="true" tabindex="-1"></a>plot5 <span class="ot">=</span> dem_margin_g <span class="sc">%&gt;%</span></span>
+<span id="cb39-207"><a href="#cb39-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(d_margin)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-208"><a href="#cb39-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, d_margin), <span class="at">y =</span> d_margin)) <span class="sc">+</span> </span>
+<span id="cb39-209"><a href="#cb39-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-210"><a href="#cb39-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb39-211"><a href="#cb39-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-212"><a href="#cb39-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Democratic margin of victory percentage&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-213"><a href="#cb39-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Highest Democratic margins of victory</span><span class="sc">\n</span><span class="st">for governor race in GA counties (Top 10)&quot;</span>,</span>
+<span id="cb39-214"><a href="#cb39-214" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-215"><a href="#cb39-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-216"><a href="#cb39-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-217"><a href="#cb39-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-218"><a href="#cb39-218" aria-hidden="true" tabindex="-1"></a>plot5</span>
+<span id="cb39-219"><a href="#cb39-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-220"><a href="#cb39-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-221"><a href="#cb39-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-222"><a href="#cb39-222" aria-hidden="true" tabindex="-1"></a>**6)**</span>
+<span id="cb39-223"><a href="#cb39-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-224"><a href="#cb39-224" aria-hidden="true" tabindex="-1"></a>Now, we&#39;ll determine the top 10 counties with the biggest differences between what the Republican candidate for Governor received and what the Senate candidate received.</span>
+<span id="cb39-225"><a href="#cb39-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-226"><a href="#cb39-226" aria-hidden="true" tabindex="-1"></a>(Note that to accomplish this you&#39;ll have to first run a join that merges the two datasets, so that you have both the senate and governor version of the <span class="in">`pct_r_2022`</span> column in the same table.)</span>
+<span id="cb39-227"><a href="#cb39-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-230"><a href="#cb39-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-231"><a href="#cb39-231" aria-hidden="true" tabindex="-1"></a><span class="co"># .x are senate results; .y are governor results</span></span>
+<span id="cb39-232"><a href="#cb39-232" aria-hidden="true" tabindex="-1"></a>sen_gov_results <span class="ot">=</span> <span class="fu">inner_join</span>(senate_results, governor_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;county&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
+<span id="cb39-233"><a href="#cb39-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-234"><a href="#cb39-234" aria-hidden="true" tabindex="-1"></a>sen_gov_results <span class="ot">=</span> sen_gov_results <span class="sc">%&gt;%</span> </span>
+<span id="cb39-235"><a href="#cb39-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct_r_diff =</span> pct_r_2022.y <span class="sc">-</span> pct_r_2022.x)</span>
+<span id="cb39-236"><a href="#cb39-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-237"><a href="#cb39-237" aria-hidden="true" tabindex="-1"></a>r_diff <span class="ot">=</span> sen_gov_results <span class="sc">%&gt;%</span></span>
+<span id="cb39-238"><a href="#cb39-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span></span>
+<span id="cb39-239"><a href="#cb39-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pct_r_diff =</span> pct_r_diff) <span class="sc">%&gt;%</span></span>
+<span id="cb39-240"><a href="#cb39-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_r_diff)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-241"><a href="#cb39-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb39-242"><a href="#cb39-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-243"><a href="#cb39-243" aria-hidden="true" tabindex="-1"></a>plot6 <span class="ot">=</span> r_diff <span class="sc">%&gt;%</span></span>
+<span id="cb39-244"><a href="#cb39-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_r_diff)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-245"><a href="#cb39-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(county, pct_r_diff), <span class="at">y =</span> pct_r_diff)) <span class="sc">+</span> </span>
+<span id="cb39-246"><a href="#cb39-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#9ebcda&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-247"><a href="#cb39-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb39-248"><a href="#cb39-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Counties&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-249"><a href="#cb39-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Percent difference&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-250"><a href="#cb39-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Pct differences between Republican senate</span><span class="sc">\n</span><span class="st">and governor candidates in GA counties (Top 10)&quot;</span>,</span>
+<span id="cb39-251"><a href="#cb39-251" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2022&quot;</span>) <span class="sc">+</span></span>
+<span id="cb39-252"><a href="#cb39-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span> </span>
+<span id="cb39-253"><a href="#cb39-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>))</span>
+<span id="cb39-254"><a href="#cb39-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-255"><a href="#cb39-255" aria-hidden="true" tabindex="-1"></a>plot6</span>
+<span id="cb39-256"><a href="#cb39-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-257"><a href="#cb39-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-258"><a href="#cb39-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-259"><a href="#cb39-259" aria-hidden="true" tabindex="-1"></a><span class="fu"># Maps</span></span>
+<span id="cb39-260"><a href="#cb39-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-261"><a href="#cb39-261" aria-hidden="true" tabindex="-1"></a>*For this section we&#39;ll use the `tmap` package to create your charts.*</span>
+<span id="cb39-262"><a href="#cb39-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-263"><a href="#cb39-263" aria-hidden="true" tabindex="-1"></a>To help start things out, we&#39;re going to download a geospatial/map dataset with the county boundaries for Georgia. We&#39;ll use the <span class="in">`tigris`</span> package to do this.</span>
+<span id="cb39-264"><a href="#cb39-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-267"><a href="#cb39-267" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-268"><a href="#cb39-268" aria-hidden="true" tabindex="-1"></a>counties_geo <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">counties</span>(<span class="at">state =</span> <span class="st">&quot;GA&quot;</span>, <span class="at">resolution =</span> <span class="st">&quot;20m&quot;</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb39-269"><a href="#cb39-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-270"><a href="#cb39-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-271"><a href="#cb39-271" aria-hidden="true" tabindex="-1"></a>Now let&#39;s take a look at what we have, by mapping out the polygons of the Georgia counties using the tmap package.</span>
+<span id="cb39-272"><a href="#cb39-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-275"><a href="#cb39-275" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-276"><a href="#cb39-276" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(counties_geo) <span class="sc">+</span> </span>
+<span id="cb39-277"><a href="#cb39-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
 <span id="cb39-278"><a href="#cb39-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-279"><a href="#cb39-279" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-280"><a href="#cb39-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-281"><a href="#cb39-281" aria-hidden="true" tabindex="-1"></a>Great, it looks like we should be good to go. We&#39;ll use the newly created map data in <span class="in">`counties_geo`</span> along with our election results datasets to complete the parts below.</span>
-<span id="cb39-282"><a href="#cb39-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-283"><a href="#cb39-283" aria-hidden="true" tabindex="-1"></a>**7)**</span>
-<span id="cb39-284"><a href="#cb39-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-285"><a href="#cb39-285" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a choropleth (shaded) map of Georgia counties that shows where the Republican candidate for Senate did better vs. worse than Trump.</span>
-<span id="cb39-286"><a href="#cb39-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-289"><a href="#cb39-289" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-290"><a href="#cb39-290" aria-hidden="true" tabindex="-1"></a>new_senate_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
-<span id="cb39-291"><a href="#cb39-291" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , senate_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
-<span id="cb39-292"><a href="#cb39-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-293"><a href="#cb39-293" aria-hidden="true" tabindex="-1"></a>map1 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_senate_sf) <span class="sc">+</span> </span>
-<span id="cb39-294"><a href="#cb39-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_above_trump&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference from Trump&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-295"><a href="#cb39-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Republican senate candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>,</span>
-<span id="cb39-296"><a href="#cb39-296" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
-<span id="cb39-297"><a href="#cb39-297" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb39-298"><a href="#cb39-298" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
-<span id="cb39-299"><a href="#cb39-299" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb39-300"><a href="#cb39-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-301"><a href="#cb39-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-302"><a href="#cb39-302" aria-hidden="true" tabindex="-1"></a>map1</span>
-<span id="cb39-303"><a href="#cb39-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-304"><a href="#cb39-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-305"><a href="#cb39-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-306"><a href="#cb39-306" aria-hidden="true" tabindex="-1"></a>**8)**</span>
-<span id="cb39-307"><a href="#cb39-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-308"><a href="#cb39-308" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 7, just this time we&#39;ll do it for the race for Governor.</span>
-<span id="cb39-309"><a href="#cb39-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-312"><a href="#cb39-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-313"><a href="#cb39-313" aria-hidden="true" tabindex="-1"></a>new_governor_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
-<span id="cb39-314"><a href="#cb39-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , governor_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
-<span id="cb39-315"><a href="#cb39-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-316"><a href="#cb39-316" aria-hidden="true" tabindex="-1"></a>map2 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_governor_sf) <span class="sc">+</span> </span>
-<span id="cb39-317"><a href="#cb39-317" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_above_trump&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference from Trump&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-318"><a href="#cb39-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Republican governor candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>,</span>
-<span id="cb39-319"><a href="#cb39-319" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
-<span id="cb39-320"><a href="#cb39-320" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb39-321"><a href="#cb39-321" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
-<span id="cb39-322"><a href="#cb39-322" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb39-323"><a href="#cb39-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-324"><a href="#cb39-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-279"><a href="#cb39-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-280"><a href="#cb39-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-281"><a href="#cb39-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-282"><a href="#cb39-282" aria-hidden="true" tabindex="-1"></a>Great, it looks like we should be good to go. We&#39;ll use the newly created map data in <span class="in">`counties_geo`</span> along with our election results datasets to complete the parts below.</span>
+<span id="cb39-283"><a href="#cb39-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-284"><a href="#cb39-284" aria-hidden="true" tabindex="-1"></a>**7)**</span>
+<span id="cb39-285"><a href="#cb39-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-286"><a href="#cb39-286" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a choropleth (shaded) map of Georgia counties that shows where the Republican candidate for Senate did better vs. worse than Trump.</span>
+<span id="cb39-287"><a href="#cb39-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-290"><a href="#cb39-290" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-291"><a href="#cb39-291" aria-hidden="true" tabindex="-1"></a>new_senate_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
+<span id="cb39-292"><a href="#cb39-292" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , senate_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
+<span id="cb39-293"><a href="#cb39-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-294"><a href="#cb39-294" aria-hidden="true" tabindex="-1"></a>map1 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_senate_sf) <span class="sc">+</span> </span>
+<span id="cb39-295"><a href="#cb39-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_above_trump&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference from Trump&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb39-296"><a href="#cb39-296" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Republican senate candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>,</span>
+<span id="cb39-297"><a href="#cb39-297" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb39-298"><a href="#cb39-298" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb39-299"><a href="#cb39-299" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb39-300"><a href="#cb39-300" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb39-301"><a href="#cb39-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
+<span id="cb39-302"><a href="#cb39-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-303"><a href="#cb39-303" aria-hidden="true" tabindex="-1"></a>map1</span>
+<span id="cb39-304"><a href="#cb39-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-305"><a href="#cb39-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-306"><a href="#cb39-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-307"><a href="#cb39-307" aria-hidden="true" tabindex="-1"></a>**8)**</span>
+<span id="cb39-308"><a href="#cb39-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-309"><a href="#cb39-309" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 7, just this time we&#39;ll do it for the race for Governor.</span>
+<span id="cb39-310"><a href="#cb39-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-313"><a href="#cb39-313" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-314"><a href="#cb39-314" aria-hidden="true" tabindex="-1"></a>new_governor_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
+<span id="cb39-315"><a href="#cb39-315" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , governor_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
+<span id="cb39-316"><a href="#cb39-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-317"><a href="#cb39-317" aria-hidden="true" tabindex="-1"></a>map2 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_governor_sf) <span class="sc">+</span> </span>
+<span id="cb39-318"><a href="#cb39-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_above_trump&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference from Trump&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb39-319"><a href="#cb39-319" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Republican governor candidate performance</span><span class="sc">\n</span><span class="st">compared to Trump in GA counties&quot;</span>,</span>
+<span id="cb39-320"><a href="#cb39-320" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb39-321"><a href="#cb39-321" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb39-322"><a href="#cb39-322" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb39-323"><a href="#cb39-323" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb39-324"><a href="#cb39-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
 <span id="cb39-325"><a href="#cb39-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-326"><a href="#cb39-326" aria-hidden="true" tabindex="-1"></a>map2</span>
-<span id="cb39-327"><a href="#cb39-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-328"><a href="#cb39-328" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-329"><a href="#cb39-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-330"><a href="#cb39-330" aria-hidden="true" tabindex="-1"></a>**9)**</span>
-<span id="cb39-331"><a href="#cb39-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-332"><a href="#cb39-332" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a choropleth map that shows the margins of victory for the Democratic candidate. To do that we&#39;ll need to compare the Democratic candidate&#39;s percentage (pct_d<span class="sc">\_</span>2022) with the Republican&#39;s (pct_r<span class="sc">\_</span>2022) to calculate the margin of victory for each county.</span>
-<span id="cb39-333"><a href="#cb39-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-336"><a href="#cb39-336" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-337"><a href="#cb39-337" aria-hidden="true" tabindex="-1"></a>map3 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_senate_sf) <span class="sc">+</span> </span>
-<span id="cb39-338"><a href="#cb39-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;d_margin&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Democratic margin of victory percentages&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-339"><a href="#cb39-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Senate margins of victory for</span><span class="sc">\n</span><span class="st">Democratic candidates in GA counties&quot;</span>,</span>
-<span id="cb39-340"><a href="#cb39-340" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
-<span id="cb39-341"><a href="#cb39-341" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb39-342"><a href="#cb39-342" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.4</span>,</span>
-<span id="cb39-343"><a href="#cb39-343" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb39-344"><a href="#cb39-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-345"><a href="#cb39-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-346"><a href="#cb39-346" aria-hidden="true" tabindex="-1"></a>map3</span>
-<span id="cb39-347"><a href="#cb39-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-348"><a href="#cb39-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-349"><a href="#cb39-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-350"><a href="#cb39-350" aria-hidden="true" tabindex="-1"></a>**10)**</span>
-<span id="cb39-351"><a href="#cb39-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-352"><a href="#cb39-352" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 4, only this time for the race for Governor instead.</span>
-<span id="cb39-353"><a href="#cb39-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-356"><a href="#cb39-356" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-357"><a href="#cb39-357" aria-hidden="true" tabindex="-1"></a>map4 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_governor_sf) <span class="sc">+</span> </span>
-<span id="cb39-358"><a href="#cb39-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;d_margin&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Democratic margin of victory percentages&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-359"><a href="#cb39-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Governor margins of victory for</span><span class="sc">\n</span><span class="st">Democratic candidates in GA counties&quot;</span>,</span>
-<span id="cb39-360"><a href="#cb39-360" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
-<span id="cb39-361"><a href="#cb39-361" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb39-362"><a href="#cb39-362" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
-<span id="cb39-363"><a href="#cb39-363" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb39-364"><a href="#cb39-364" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-365"><a href="#cb39-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-366"><a href="#cb39-366" aria-hidden="true" tabindex="-1"></a>map4</span>
-<span id="cb39-367"><a href="#cb39-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-368"><a href="#cb39-368" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-369"><a href="#cb39-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-370"><a href="#cb39-370" aria-hidden="true" tabindex="-1"></a>**11)**</span>
-<span id="cb39-371"><a href="#cb39-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-372"><a href="#cb39-372" aria-hidden="true" tabindex="-1"></a>Now, we&#39;ll determine the biggest differences between what the Republican candidate for Governor received and what the Senate candidate received. Then, we&#39;ll create a choropleth map of Georgia counties that shows those differences.</span>
-<span id="cb39-373"><a href="#cb39-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-374"><a href="#cb39-374" aria-hidden="true" tabindex="-1"></a>(Note that to accomplish this we&#39;ll have to first run a join that merges the two datasets, so that you have both the senate and governor version of the <span class="in">`pct_r_2022`</span> column in the same table.)</span>
-<span id="cb39-375"><a href="#cb39-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-378"><a href="#cb39-378" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb39-379"><a href="#cb39-379" aria-hidden="true" tabindex="-1"></a>sen_gov_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
-<span id="cb39-380"><a href="#cb39-380" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , sen_gov_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
-<span id="cb39-381"><a href="#cb39-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-382"><a href="#cb39-382" aria-hidden="true" tabindex="-1"></a>map5 <span class="ot">=</span> <span class="fu">tm_shape</span>(sen_gov_sf) <span class="sc">+</span> </span>
-<span id="cb39-383"><a href="#cb39-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_diff&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb39-384"><a href="#cb39-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Percent differences between Republican senate</span><span class="sc">\n</span><span class="st">and governor candidates in GA counties&quot;</span>,</span>
-<span id="cb39-385"><a href="#cb39-385" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.1</span>,</span>
-<span id="cb39-386"><a href="#cb39-386" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb39-387"><a href="#cb39-387" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
-<span id="cb39-388"><a href="#cb39-388" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb39-389"><a href="#cb39-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
-<span id="cb39-390"><a href="#cb39-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-391"><a href="#cb39-391" aria-hidden="true" tabindex="-1"></a>map5</span>
-<span id="cb39-392"><a href="#cb39-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-393"><a href="#cb39-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb39-394"><a href="#cb39-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-395"><a href="#cb39-395" aria-hidden="true" tabindex="-1"></a><span class="fu"># </span></span>
+<span id="cb39-326"><a href="#cb39-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-327"><a href="#cb39-327" aria-hidden="true" tabindex="-1"></a>map2</span>
+<span id="cb39-328"><a href="#cb39-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-329"><a href="#cb39-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-330"><a href="#cb39-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-331"><a href="#cb39-331" aria-hidden="true" tabindex="-1"></a>**9)**</span>
+<span id="cb39-332"><a href="#cb39-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-333"><a href="#cb39-333" aria-hidden="true" tabindex="-1"></a>For the Senate race, we&#39;ll create a choropleth map that shows the margins of victory for the Democratic candidate. To do that we&#39;ll need to compare the Democratic candidate&#39;s percentage (pct_d<span class="sc">\_</span>2022) with the Republican&#39;s (pct_r<span class="sc">\_</span>2022) to calculate the margin of victory for each county.</span>
+<span id="cb39-334"><a href="#cb39-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-337"><a href="#cb39-337" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-338"><a href="#cb39-338" aria-hidden="true" tabindex="-1"></a>map3 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_senate_sf) <span class="sc">+</span> </span>
+<span id="cb39-339"><a href="#cb39-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;d_margin&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Democratic margin of victory percentages&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb39-340"><a href="#cb39-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Senate margins of victory for</span><span class="sc">\n</span><span class="st">Democratic candidates in GA counties&quot;</span>,</span>
+<span id="cb39-341"><a href="#cb39-341" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb39-342"><a href="#cb39-342" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb39-343"><a href="#cb39-343" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.4</span>,</span>
+<span id="cb39-344"><a href="#cb39-344" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb39-345"><a href="#cb39-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
+<span id="cb39-346"><a href="#cb39-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-347"><a href="#cb39-347" aria-hidden="true" tabindex="-1"></a>map3</span>
+<span id="cb39-348"><a href="#cb39-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-349"><a href="#cb39-349" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-350"><a href="#cb39-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-351"><a href="#cb39-351" aria-hidden="true" tabindex="-1"></a>**10)**</span>
+<span id="cb39-352"><a href="#cb39-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-353"><a href="#cb39-353" aria-hidden="true" tabindex="-1"></a>Now we&#39;ll do the same as Part 4, only this time for the race for Governor instead.</span>
+<span id="cb39-354"><a href="#cb39-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-357"><a href="#cb39-357" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-358"><a href="#cb39-358" aria-hidden="true" tabindex="-1"></a>map4 <span class="ot">=</span> <span class="fu">tm_shape</span>(new_governor_sf) <span class="sc">+</span> </span>
+<span id="cb39-359"><a href="#cb39-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;d_margin&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Democratic margin of victory percentages&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb39-360"><a href="#cb39-360" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Governor margins of victory for</span><span class="sc">\n</span><span class="st">Democratic candidates in GA counties&quot;</span>,</span>
+<span id="cb39-361"><a href="#cb39-361" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb39-362"><a href="#cb39-362" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb39-363"><a href="#cb39-363" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb39-364"><a href="#cb39-364" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb39-365"><a href="#cb39-365" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
+<span id="cb39-366"><a href="#cb39-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-367"><a href="#cb39-367" aria-hidden="true" tabindex="-1"></a>map4</span>
+<span id="cb39-368"><a href="#cb39-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-369"><a href="#cb39-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-370"><a href="#cb39-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-371"><a href="#cb39-371" aria-hidden="true" tabindex="-1"></a>**11)**</span>
+<span id="cb39-372"><a href="#cb39-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-373"><a href="#cb39-373" aria-hidden="true" tabindex="-1"></a>Now, we&#39;ll determine the biggest differences between what the Republican candidate for Governor received and what the Senate candidate received. Then, we&#39;ll create a choropleth map of Georgia counties that shows those differences.</span>
+<span id="cb39-374"><a href="#cb39-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-375"><a href="#cb39-375" aria-hidden="true" tabindex="-1"></a>(Note that to accomplish this we&#39;ll have to first run a join that merges the two datasets, so that you have both the senate and governor version of the <span class="in">`pct_r_2022`</span> column in the same table.)</span>
+<span id="cb39-376"><a href="#cb39-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-379"><a href="#cb39-379" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb39-380"><a href="#cb39-380" aria-hidden="true" tabindex="-1"></a>sen_gov_sf <span class="ot">=</span> counties_geo <span class="sc">%&gt;%</span></span>
+<span id="cb39-381"><a href="#cb39-381" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(. , sen_gov_results, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span><span class="ot">=</span><span class="st">&quot;county&quot;</span>))</span>
+<span id="cb39-382"><a href="#cb39-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-383"><a href="#cb39-383" aria-hidden="true" tabindex="-1"></a>map5 <span class="ot">=</span> <span class="fu">tm_shape</span>(sen_gov_sf) <span class="sc">+</span> </span>
+<span id="cb39-384"><a href="#cb39-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">col=</span><span class="st">&quot;pct_r_diff&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Percent difference&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb39-385"><a href="#cb39-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">main.title =</span> <span class="st">&quot;Percent differences between Republican senate</span><span class="sc">\n</span><span class="st">and governor candidates in GA counties&quot;</span>,</span>
+<span id="cb39-386"><a href="#cb39-386" aria-hidden="true" tabindex="-1"></a>            <span class="at">main.title.size =</span> <span class="fl">1.1</span>,</span>
+<span id="cb39-387"><a href="#cb39-387" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb39-388"><a href="#cb39-388" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.outside.size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb39-389"><a href="#cb39-389" aria-hidden="true" tabindex="-1"></a>            <span class="at">legend.text.size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb39-390"><a href="#cb39-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span>
+<span id="cb39-391"><a href="#cb39-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-392"><a href="#cb39-392" aria-hidden="true" tabindex="-1"></a>map5</span>
+<span id="cb39-393"><a href="#cb39-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-394"><a href="#cb39-394" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-395"><a href="#cb39-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-396"><a href="#cb39-396" aria-hidden="true" tabindex="-1"></a><span class="fu"># </span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
