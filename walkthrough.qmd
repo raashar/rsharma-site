@@ -41,6 +41,7 @@ census_api_key("2a6f8c21a30d3024e038d67d7d4eba647dc79cd4", install=TRUE, overwri
 
 ```
 
+Here, we choose variables we want
 ```{r}
 #chose variables we want
 myvars <- c(totalpop = "B01003_001",
@@ -49,7 +50,7 @@ myvars <- c(totalpop = "B01003_001",
 )
 ```
 
-
+Now, we pull for GA counties
 ```{r}
 #pull for GA counties
 ga_counties_withgeo <- get_acs(geography = "county",
@@ -61,6 +62,7 @@ ga_counties_withgeo <- get_acs(geography = "county",
 ga_counties_withgeo
 ```
 
+We can also get all counties in the US
 ```{r}
 #all counties in the US
 all_counties_withgeo <- get_acs(geography = "county",
@@ -71,6 +73,7 @@ all_counties_withgeo <- get_acs(geography = "county",
 all_counties_withgeo
 ```
 
+Then, we remove MOE columns - they all end with "M"
 ```{r}
 #remove MOE columns - they all end with "M"
 ga_counties_withgeo <- ga_counties_withgeo %>%
@@ -79,6 +82,7 @@ ga_counties_withgeo <- ga_counties_withgeo %>%
 ga_counties_withgeo
 ```
 
+...and also remove that trailing "E"
 ```{r}
 #remove that trailing "E"
 colnames(ga_counties_withgeo) <- sub("E$", "", colnames(ga_counties_withgeo)) # $ means end of string only
