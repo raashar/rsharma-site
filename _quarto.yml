@@ -16,6 +16,7 @@ website:
       - academic.qmd
       - portfolio.qmd
       - walkthrough.qmd
+      - electionproj.qmd
       
 
 
