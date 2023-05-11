@@ -54,3 +54,5 @@ Though the Supreme Court temporarily [preserved](https://www.cbsnews.com/news/su
 An average of `r preg2017$mean_abortion` percent of people receive abortions nationwide, with the highest average, `r preg2017$mean_2024` percent, being among women aged 20 to 24.
 
 With reproductive health under threat, Americans are mobilizing to maintain protections. In response to Florida's ban, a [coalition](https://www.nytimes.com/2023/05/05/us/politics/florida-abortion-ballot-ban-six-weeks.html?searchResultPosition=7) of organizers is aiming to reduce "government interference with abortion" by placing a measure for abortion access on the ballot next year.
+
+*You can see the code I used for the inline statistics by viewing the breaking.qmd page in my github repository [here](https://github.com/raashar/rsharma-site).*
