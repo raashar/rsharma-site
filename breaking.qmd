@@ -25,24 +25,32 @@ preg = read_csv("/cloud/project/NationalAndStatePregnancy_PublicUse.csv")
 
 head(preg)
 
-preg_2017 = preg %>% 
+```
+
+```{r, include=FALSE}
+preg2017 = preg %>% 
   filter(year==2017) %>%
-  group_by(state)
-
-preg_2017
-
+  summarize(mean_abortion =
+            janitor::round_half_up(mean(abortionratetotal), 2),
+            mean_2024 = janitor::round_half_up(mean(abortionrate2024), 2))
 ```
 
-```{r}
+# Breaking News: Access to Abortion Decreases Across the Country
 
-mean(preg_2017$abortionratetotal)
-median(preg_2017$abortionratetotal)
+\* *This is an example breaking news story regarding abortion access that uses inline R code \**
 
+On Thursday, May 4, North Carolina approved [legislation](https://www.nytimes.com/2023/05/04/us/abortion-ban-north-carolina.html?searchResultPosition=4) banning almost all abortions after 12 weeks. North Carolina is following the lead of Florida, North Dakota, and 12 other states who enacted abortion bans after the Supreme Court [overturned](https://www.nytimes.com/interactive/2022/06/24/us/politics/supreme-court-dobbs-jackson-analysis-roe-wade.html) Roe v. Wade in June.
 
+The North Carolina Senate voted 29-20 to approve the ban. However, the governor has 10 days to decide whether to veto it or not.
 
-```
+The Republican party can still override the veto if they receive an adequate number of votes.
 
+DeSantis's strict legislation bans abortions after 6 weeks in [Florida](https://www.nytimes.com/2023/04/13/us/florida-six-week-abortion-ban.html?searchResultPosition=32), even though one in three people do not know they are pregnant until after this period. Hailed as a refuge for those in the Deep South seeking abortions, Florida is now scaling back on its protections.
 
+This news comes as an increasing number of restrictions have been placed on abortion access. On April 8, a Texas federal judge ruled that [mifepristone](https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/questions-and-answers-mifepristone-medical-termination-pregnancy-through-ten-weeks-gestation), a key medication used to end pregnancy within 10 weeks, violated a federal rule.
 
+Though the Supreme Court temporarily [preserved](https://www.cbsnews.com/news/supreme-court-abortion-pill-access-mifepristone/) access to these pills, the future of reproductive health hangs in the balance, especially as states like Alabama, Texas, and Missouri uphold pre-Roe trigger [bans](https://reproductiverights.org/maps/abortion-laws-by-state/) that include civil and criminal penalties for seeking and performing abortions.
 
+An average of `r preg2017$mean_abortion` percent of people receive abortions nationwide, with the highest average, `r preg2017$mean_2024` percent, being among women aged 20 to 24.
 
+With reproductive health under threat, Americans are mobilizing to maintain protections. In response to Florida's ban, a [coalition](https://www.nytimes.com/2023/05/05/us/politics/florida-abortion-ballot-ban-six-weeks.html?searchResultPosition=7) of organizers is aiming to reduce "government interference with abortion" by placing a measure for abortion access on the ballot next year.

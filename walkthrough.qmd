@@ -9,6 +9,12 @@ format:
 
 ---
 
+# Getting Started
+
+This walkthrough will cover how you can visualize data in map form! This includes Census data through the tidycensus package. We'll go through customization as well. 
+
+To begin, we must load our packages. 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -27,21 +33,27 @@ options(tigris_class = "sf")
 
 ```
 
-# Interactive Maps with MapView Package
+# Choosing Variables
 
 We'll be using the tidycensus package to pull both census data, as well as geospatial boundaries. 
-Let's quickly review how we use it.
+
+In order to access the data used in this walkthrough, we'll need a Census API. You can learn how to install and use one [here](https://walker-data.com/tidycensus/articles/basic-usage.html). 
 
 ```{r echo=FALSE}
 
 # uncomment to run, then recomment it out so you don't run it every time
 
-census_api_key("2a6f8c21a30d3024e038d67d7d4eba647dc79cd4", install=TRUE, overwrite = TRUE)
+# census_api_key("2a6f8c21a30d3024e038d67d7d4eba647dc79cd4", install=TRUE, overwrite = TRUE)
 
 
 ```
 
-Here, we choose variables we want
+Now, we choose variables we want to use from the American Community Survey, conducted by the US Census Bureau. There are many to choose from, and we can look at them by using the load_variables() function. 
+
+I assigned it to a variable called acs. Since there are lots of variables, it's helpful to view the entire acs dataframe and see the descriptions. We will pull total population (assigned to the totalpop variable), median household income (assigned to medincome), and medage (median age). 
+
+The c() function creates a vector with these variable names, and we are assigning it to the myvars variable. 
+
 ```{r}
 #chose variables we want
 myvars <- c(totalpop = "B01003_001",
@@ -50,7 +62,18 @@ myvars <- c(totalpop = "B01003_001",
 )
 ```
 
-Now, we pull for GA counties
+# Creating a New Dataframe
+
+Now, we pull the information for GA counties. To do so, we use the get_acs() function. The arguments are as follows: 
+
+- geography = "county": we pull data for each county
+- variables = c(myvars): we use the variables we pulled previously (medincome, totalpop, medage) in our dataframe
+- state = "GA": We are pulling state data for GA
+- output = "wide": This makes data easier to read by pivoting wide
+- geometry = TRUE: This includes all shapefile data necessary to make a map
+
+We're assigning this to ga_counties_withgeo
+
 ```{r}
 #pull for GA counties
 ga_counties_withgeo <- get_acs(geography = "county",
@@ -62,7 +85,8 @@ ga_counties_withgeo <- get_acs(geography = "county",
 ga_counties_withgeo
 ```
 
-We can also get all counties in the US
+We can also get all counties in the US, but be mindful that this would be a bit difficult to visualize on a map. 
+
 ```{r}
 #all counties in the US
 all_counties_withgeo <- get_acs(geography = "county",
@@ -70,10 +94,11 @@ all_counties_withgeo <- get_acs(geography = "county",
                        output = "wide",
                        geometry = TRUE)
 
-all_counties_withgeo
+head(all_counties_withgeo)
 ```
 
-Then, we remove MOE columns - they all end with "M"
+As you can see in the results above, there are E and M columns. The ones ending in "M" are margin of error columns, which we do not need for this analysis. So, we shall remove the column with the select() function. The - symbol cuts columns, and the ends_with() function identifies those ending in "M".  
+
 ```{r}
 #remove MOE columns - they all end with "M"
 ga_counties_withgeo <- ga_counties_withgeo %>%
@@ -82,7 +107,7 @@ ga_counties_withgeo <- ga_counties_withgeo %>%
 ga_counties_withgeo
 ```
 
-...and also remove that trailing "E"
+...we'll also remove that trailing "E" from the estimate columns, which we will use for analysis. The sub function allows us to do so. E$ means the E at the end of the variable will be removed. 
 ```{r}
 #remove that trailing "E"
 colnames(ga_counties_withgeo) <- sub("E$", "", colnames(ga_counties_withgeo)) # $ means end of string only
@@ -90,7 +115,9 @@ colnames(ga_counties_withgeo) <- sub("E$", "", colnames(ga_counties_withgeo)) # 
 ga_counties_withgeo
 ```
 
-Mapping GA counties with mapview
+# Mapping GA counties with Mapview
+
+Our first simple maps use mapview(). It takes our dataframe (ga_counties_withgeo) and variables (zcol) as arguments. As you can see,  the first map shows median income and the second shows median age in each GA county. 
 
 ```{r}
 
@@ -99,9 +126,10 @@ mapview(ga_counties_withgeo, zcol = "medincome")
 mapview(ga_counties_withgeo, zcol = "medage")
 
 ```
+# Customizing
 
+To jazz things up a bit, let's change from the default theme. We do so by adding an argument called col.regions. This utilizes the RColorBrewer package, which houses different dicrete and continuous palettes. We are using the "Greens" palette. Below is a map showing median income with a different palette.  
 
-Customize colors
 ```{r}
 
 mapview(ga_counties_withgeo, zcol = "medincome", 
@@ -111,7 +139,8 @@ mapview(ga_counties_withgeo, zcol = "medincome",
 
 
 ```
-This map’s dark background appeared automatically, because mapview determined the map included a lot of light colors. You can turn off that feature.
+
+This map’s dark background appeared automatically, because mapview determined the map included a lot of light colors. You can turn off that feature with the following code. It makes things easier to understand. 
 
 ```{r}
 
@@ -120,6 +149,7 @@ mapviewOptions("basemaps.color.shuffle" = FALSE)
 
 ```
 
+Here's a new map with the light background. 
 
 ```{r}
 
@@ -131,7 +161,8 @@ mapview(ga_counties_withgeo, zcol = "medincome",
 
 ```
 
-Two maps together
+We can also compare two maps at the same time! You'll need to assign the code used to create the map to do this. map_income is our map of median household income in GA counties, while map_age is our map of median age in GA counties. 
+
 ```{r}
 
 map_income <- mapview(ga_counties_withgeo, zcol = "medincome", 
@@ -145,6 +176,7 @@ map_age <- mapview(ga_counties_withgeo, zcol = "medage",
 
 ```
 
+The sync() function shows two maps together, like so: 
 
 ```{r}
 # two maps together
@@ -153,14 +185,16 @@ sync(map_income, map_age)
 
 ```
 
-Side-by-side slider to compare the two, from the leaflet.extras2 package 
+We may also include a side-by-side slider by separating the map variables with the "|" symbol. This is from the leaflet.extras2 package. 
+
 ```{r}
 
 map_income | map_age
 
 
 ```
-To turn off legends, hover text, popups
+
+Finally, we can also turn off legends for a cleaner apperance. Make sure your map is interpretable without a legend, however. You want to include an accessible visualization in your projects!
 
 
 ```{r}
@@ -168,55 +202,7 @@ To turn off legends, hover text, popups
 mapview(ga_counties_withgeo, zcol = "medincome", 
          col.regions = RColorBrewer::brewer.pal(9, "Greens"), 
          alpha.regions = 1,
-         legend = FALSE, 
-         label = FALSE, 
-         popup = FALSE)
+         legend = FALSE)
 
 
 ```
-
-Customize labels with the glue package
-```{r}
-
-mylabel <- glue::glue("{ga_counties_withgeo$NAM} {ga_counties_withgeo$medincome}")
-
-
-mapview(ga_counties_withgeo, zcol = "medincome", 
-         col.regions = RColorBrewer::brewer.pal(9, "Greens"), 
-         alpha.regions = 1,
-         label = mylabel)
-
-# makes label of county name and median income
-
-```
-
-Customize popups
-```{r}
-mypopup <- glue::glue("<strong>{ga_counties_withgeo$NAM}</strong><br />
-                      Total Population: {ga_counties_withgeo$totalpop}<br />
-                      Median Income: {ga_counties_withgeo$medincome}") %>% 
-  lapply(htmltools::HTML)
-
-# mylabel <- glue::glue("{all_data$State} {all_data$PctChange10_20}%") %>% lapply(htmltools::HTML)
-
-```
-
-
-```{r}
-
-head(mypopup)
-
-```
-
-
-```{r}
-
-mapview(ga_counties_withgeo, zcol = "medincome", 
-         col.regions = RColorBrewer::brewer.pal(9, "Greens"), 
-         alpha.regions = 1,
-         popup = mypopup,
-        label = mylabel)
-
-```
-
-
