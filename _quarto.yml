@@ -17,6 +17,8 @@ website:
       - portfolio.qmd
       - walkthrough.qmd
       - electionproj.qmd
+      - tidywalkthrough.qmd
+      - breaking.qmd
       
 
 

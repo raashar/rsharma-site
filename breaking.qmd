@@ -1,0 +1,47 @@
+---
+title: "Sample Breaking News Story"
+author: "Riya Sharma"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+---
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(tigris)
+library(ggplot2)
+library(htmltools)
+library(janitor)
+library(here)
+
+```
+
+```{r, include=FALSE, warning=FALSE, message=FALSE}
+
+preg = read_csv("/cloud/project/NationalAndStatePregnancy_PublicUse.csv")
+
+head(preg)
+
+preg_2017 = preg %>% 
+  filter(year==2017) %>%
+  group_by(state)
+
+preg_2017
+
+```
+
+```{r}
+
+sum(preg_2017$abortionratetotal) / 52
+
+
+
+```
+
+
+
+
+

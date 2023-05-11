@@ -1,0 +1,220 @@
+---
+title: "Using Tidycensus to Make Maps in R: A Walkthrough"
+author: "Riya Sharma"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+---
+
+First things first, let's go ahead and reach into our library and load all necessary packages, namely tidycensus.
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(tigris)
+library(sf)
+library(tidycensus)
+library(htmltools)
+library(janitor)
+library(here)
+library(mapview)
+library(leafsync)
+library(leaflet.extras2)
+options(tigris_class = "sf")
+
+```
+
+# Getting Started 
+
+tidycensus is an extremely useful package if you're someone who likes to work with US Census data. If you've ever explored the census.gov website, you'll know the their downloadable datasets are not exactly readable, especially in R.
+
+Tidycensus allows you to search for variables, build clean datasets, and even use the information to make great visualizations, like maps! Today, our task is to visualize income inequality between Native Americans and White Americans in the US. To do so, we'll analyze median household income across the 50 states and create a map (using the mapview package) displaying this variable.
+
+First, you'll need to install and/or load your Census API key. You can learn how to do so [here](https://walker-data.com/tidycensus/articles/basic-usage.html).
+
+```{r, include = FALSE}
+# census_api_key("2a6f8c21a30d3024e038d67d7d4eba647dc79cd4", install=TRUE, overwrite = TRUE)
+```
+
+# Loading Variables for Analysis: Native Americans
+
+Now, it's time to explore the different variables you can use in your analysis. To do so, you'll use the load_variables() function and input the year and type of Census survey. We'll be pulling from the 2021 ACS5 in this example. This is a big dataset, so I find it's easier to use View() than head() here.
+
+```{r}
+acs = load_variables(2021, "acs5", cache = TRUE)
+
+head(acs)
+```
+
+For now, I want to focus on Native Americans' income data, so I'll use the following variables: median household income for Native Americans (B19013C_001) and aggregate household income for Native Americans (B19025C_001). 
+
+I'm combining these in a vector and assigning them to a variable called acs_vars. Within the vector, I gave the variables more readable names for analysis purposes.
+
+```{r}
+acs_vars = c(median_income = "B19013C_001",
+             aggregate_income = "B19025C_001")
+```
+
+## Creating a Dataframe
+
+Now, because we are going to make maps to visualize income inequality across the US, we'll need to create a dataset that breaks median household income down by state and includes the shapefile info needed to generate a map in mapview. 
+
+We do this by once again using the get_acs() function, whose arguments include geography, variables, output, and geometry. Here's a breakdown of what these mean: 
+
+- geography = "state": we pull data at the state-level
+- variables = c(acs_vars): we use the variables we pulled previously (median_income, aggregate_income) in our dataset 
+- output = "wide": This makes data easier to read by pivoting wide
+- geometry = TRUE: This includes all shapefile data necessary to make a map
+
+```{r}
+# pull for US states
+us_native_income <- get_acs(geography = "state",
+                               variables = c(acs_vars),
+                               output = "wide",
+                               geometry = TRUE)
+
+head(us_native_income)
+```
+
+# Cleaning Data: Native Americans
+
+Looking at the first few rows, we can see if there are rows for Native Americans' estimated median household income and the margin of error by seeing if there's a trailing E or M. Since we are only concerned with the estimates, we'll remove the margin of error columns, AKA any column ending with "M".
+
+```{r}
+us_native_income <- us_native_income %>%
+  select(-ends_with("M"))
+
+head(us_native_income)
+```
+<br> 
+Next, we'll remove the trailing "E" by using the sub() function. The $ in the code means we are reformatting the end of the string only.
+
+```{r}
+colnames(us_native_income) <- sub("E$", "", colnames(us_native_income)) 
+
+head(us_native_income)
+```
+<br> 
+For cosmetic reasons, we'll place a $ in front of the median income estimates with the paste() function. I'm making this a new variable because, as we'll see later, it'll only be used to present information.
+
+```{r}
+us_native_income$median_income_signed <-paste("$",us_native_income$median_income)
+```
+
+# Making a Map: Native Americans' Median Household Income in the US
+
+Now for the exciting part: mapmaking! There are a couple components that we'll use to make this map look very nice. One is a popup. Popups show up when you click on specific states on the map. We want to display the state name and Native Americans' median household income in that state, so we'll use the glue package to do the following: 
+
+```{r}
+mylabel <- glue::glue("<strong>{us_native_income$NAM}</strong><br />
+                      Median Native American Household Income: {us_native_income$median_income_signed}") %>% 
+  lapply(htmltools::HTML)
+
+# NOTE: this function utilizes HTML syntax. For now, you just need to know to include the dataset$variable name you want to pull from. NAM is the state's name, and median_income_signed is the median income with the dollar sign.
+```
+
+Now for our actual map! We'll use mapview(). 
+- The first argument is our dataframe
+- zcol = "median_income", which is the column we are pulling from.
+- at = seq() sets the legend between $20,000 and $120,000. I am manually setting a sequence because I want to compare this map with White Americans' median income, and that would be difficult if both maps aren't on the same scale. 
+- col.regions = RColorBrewer::brewer.pal(9, "PuBuGn") allows me to use an RColorBrewer palette to color my map. 
+- popup = mylabel allows me to use the label I mentioned previously
+
+```{r}
+us_native_map = mapview(us_native_income, zcol = "median_income",
+                        at = seq(20000, 120000, 15000),
+        col.regions = RColorBrewer::brewer.pal(9, "PuBuGn"), 
+        alpha.regions = 1,
+        popup = mylabel)
+
+us_native_map
+```
+
+Voila! Map made. Now, we'll do the same for White Americans and compare median household incomes. 
+
+# Loading Variables: White Americans
+
+Same process as before: creating a vector and adding median household income and aggregate income variables for White Americans.
+```{r}
+acs_vars2 = c(median_income = "B19013A_001",
+              aggregate_income = "B19025A_001")
+```
+
+## Creating a Dataframe
+
+Pulling for all US states, like before:
+
+```{r}
+us_white_income <- get_acs(geography = "state",
+                               variables = c(acs_vars2),
+                               output = "wide",
+                               geometry = TRUE)
+
+head(us_white_income)
+```
+
+# Cleaning Data: White Americans
+
+Removing margin of error columns: 
+
+```{r}
+us_white_income <- us_white_income %>%
+  select(-ends_with("M"))
+
+head(us_white_income)
+```
+
+Removing the trailing "E": 
+
+```{r}
+colnames(us_white_income) <- sub("E$", "", colnames(us_white_income)) # $ means end of string only
+
+head(us_white_income)
+```
+
+Add dollar signs in front of income values:
+
+```{r}
+us_white_income$median_income_signed <-paste("$",us_white_income$median_income)
+```
+
+# Making a Map: White Americans
+
+Making a popup to show state name and median household income: 
+
+```{r}
+mylabel2 <- glue::glue("<strong>{us_white_income$NAM}</strong><br />
+                      Median White American Household Income: {us_white_income$median_income_signed}") %>% 
+  lapply(htmltools::HTML)
+```
+
+Making a map!
+
+```{r}
+us_white_map = mapview(us_white_income, zcol = "median_income",
+                       at = seq(20000, 120000, 15000),
+        col.regions = RColorBrewer::brewer.pal(9, "PuBuGn"), 
+        alpha.regions = 1,
+        popup = mylabel2)
+
+us_white_map
+```
+
+# Comparing Income Inequality with Both Maps
+
+Right off the bat, we can see that Native Americans do not make as much as White Americans. By setting the maps to the same scales, we are able to tell as much from the colors alone. No state shows Native Americans having a median household income of $80,000 or above. 
+
+While these maps are already proving helpful in discovering income inequality between these two groups, we might benefit more by seeing these maps side-by-side. To do so, we'll use the sync() function:
+
+```{r}
+sync(us_white_map, us_native_map)
+```
+
+# Conclusions
+
+Now we can really see how White households in states like Washington, Minnesota, and Colorado (in addition to others) often make well over $80,000 per year, while most Native American households don't bring in more than $65,000 per year. Even in Alaska, the state with the largest proportion of Natives, we see White Americans bringing in a median household income of $87,920, while Native Alaskans bring in a median household income of $53,061. In no state to Native Americans boast a higher median income than White Americans, likely due to systemic racism that has disadvantages Natives since colonists first settled in the US. This map highlights how more work needs to be done to educate and empower Native communities so they are given the resources needed to succeed financially. 
+
+
+
