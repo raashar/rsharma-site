@@ -35,7 +35,8 @@ preg_2017
 
 ```{r}
 
-sum(preg_2017$abortionratetotal) / 52
+mean(preg_2017$abortionratetotal)
+median(preg_2017$abortionratetotal)
 
 
 

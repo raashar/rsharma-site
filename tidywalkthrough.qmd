@@ -88,7 +88,7 @@ us_native_income <- us_native_income %>%
 
 head(us_native_income)
 ```
-<br> 
+
 Next, we'll remove the trailing "E" by using the sub() function. The $ in the code means we are reformatting the end of the string only.
 
 ```{r}
@@ -96,7 +96,6 @@ colnames(us_native_income) <- sub("E$", "", colnames(us_native_income))
 
 head(us_native_income)
 ```
-<br> 
 For cosmetic reasons, we'll place a $ in front of the median income estimates with the paste() function. I'm making this a new variable because, as we'll see later, it'll only be used to present information.
 
 ```{r}
@@ -116,9 +115,10 @@ mylabel <- glue::glue("<strong>{us_native_income$NAM}</strong><br />
 ```
 
 Now for our actual map! We'll use mapview(). 
+
 - The first argument is our dataframe
 - zcol = "median_income", which is the column we are pulling from.
-- at = seq() sets the legend between $20,000 and $120,000. I am manually setting a sequence because I want to compare this map with White Americans' median income, and that would be difficult if both maps aren't on the same scale. 
+- at = seq() sets the legend between 20,000 dollars and 120,000 dollars. I am manually setting a sequence because I want to compare this map with White Americans' median income, and that would be difficult if both maps aren't on the same scale. 
 - col.regions = RColorBrewer::brewer.pal(9, "PuBuGn") allows me to use an RColorBrewer palette to color my map. 
 - popup = mylabel allows me to use the label I mentioned previously
 
@@ -206,15 +206,9 @@ us_white_map
 
 Right off the bat, we can see that Native Americans do not make as much as White Americans. By setting the maps to the same scales, we are able to tell as much from the colors alone. No state shows Native Americans having a median household income of $80,000 or above. 
 
-While these maps are already proving helpful in discovering income inequality between these two groups, we might benefit more by seeing these maps side-by-side. To do so, we'll use the sync() function:
-
-```{r}
-sync(us_white_map, us_native_map)
-```
-
 # Conclusions
 
-Now we can really see how White households in states like Washington, Minnesota, and Colorado (in addition to others) often make well over $80,000 per year, while most Native American households don't bring in more than $65,000 per year. Even in Alaska, the state with the largest proportion of Natives, we see White Americans bringing in a median household income of $87,920, while Native Alaskans bring in a median household income of $53,061. In no state to Native Americans boast a higher median income than White Americans, likely due to systemic racism that has disadvantages Natives since colonists first settled in the US. This map highlights how more work needs to be done to educate and empower Native communities so they are given the resources needed to succeed financially. 
+Now we can really see how White households in states like Washington, Minnesota, and Colorado (in addition to others) often make well over 80,000 dollars per year, while most Native American households don't bring in more than 65,000 dollars per year. Even in Alaska, the state with the largest proportion of Natives, we see White Americans bringing in a median household income of 87,920 dollars, while Native Alaskans bring in a median household income of 53,061 dollars. In no state to Native Americans boast a higher median income than White Americans, likely due to systemic racism that has disadvantages Natives since colonists first settled in the US. This map highlights how more work needs to be done to educate and empower Native communities so they are given the resources needed to succeed financially. 
 
 
 
