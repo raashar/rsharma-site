@@ -223,7 +223,7 @@ white_10 = us_white_income %>%
 
 ```
 
-# Making the Charts
+## Making the Charts
 
 Now, we'll go ahead and use the ggplot2 and ggthemes packages to create charts displaying the top 10 median household incomes for both Native Americans and White Americans. 
 
@@ -249,6 +249,27 @@ native_plot = native_10 %>%
   theme_clean() + 
   theme(plot.title=element_text(size=12)) + 
   ylim(0, 160000)
+
+native_plot
+```
+
+We do the same process as above, this time for White Americans: 
+
+```{r white_plot}
+white_plot = white_10 %>%
+  ggplot(aes(x = reorder(NAM, median_income), y = median_income)) + 
+  geom_col(fill = "#9ebcda") +
+  coord_flip() + 
+  xlab("State") +
+  ylab("Median Household Income (dollars)") +
+  labs(title = "States with the Highest Median Household Income for White Americans",
+       subtitle = 2021,
+       caption = "Source: ACS 5 via tidycensus") +
+  theme_clean() + 
+  theme(plot.title=element_text(size=12)) + 
+  ylim(0, 160000)
+
+white_plot
 ```
 
 
