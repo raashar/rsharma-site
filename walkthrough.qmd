@@ -194,7 +194,7 @@ map_income | map_age
 
 ```
 
-Finally, we can also turn off legends for a cleaner apperance. Make sure your map is interpretable without a legend, however. You want to include an accessible visualization in your projects!
+Finally, we can also turn off legends for a cleaner appearance. Make sure your map can be interperated without a legend, however. You want to include an accessible visualization in your projects!
 
 
 ```{r}

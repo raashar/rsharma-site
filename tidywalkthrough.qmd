@@ -1,5 +1,5 @@
 ---
-title: "Using Tidycensus to Make Maps in R: A Walkthrough"
+title: "Using R to Visualize Income Inequality: A Walkthrough"
 author: "Riya Sharma"
 format:
   html:
@@ -247,7 +247,7 @@ native_plot = native_10 %>%
        subtitle = 2021,
        caption = "Source: ACS 5 via tidycensus") +
   theme_clean() + 
-  theme(plot.title=element_text(size=12)) + 
+  theme(plot.title=element_text(size=9.5)) + 
   ylim(0, 160000)
 
 native_plot
@@ -266,18 +266,17 @@ white_plot = white_10 %>%
        subtitle = 2021,
        caption = "Source: ACS 5 via tidycensus") +
   theme_clean() + 
-  theme(plot.title=element_text(size=12)) + 
+  theme(plot.title=element_text(size=9.5)) + 
   ylim(0, 160000)
 
 white_plot
 ```
 
-
 # Conclusions 
 
 Now we can really see how White households in states like Washington, Minnesota, and Colorado (in addition to others) often make well over 80,000 dollars per year, while most Native American households don't bring in more than 65,000 dollars per year. Even in Alaska, the state with the largest proportion of Natives, we see White Americans bringing in a median household income of 87,920 dollars, while Native Alaskans bring in a median household income of 53,061 dollars.
 
-In no state to Native Americans boast a higher median income than White Americans, likely due to systemic racism that has disadvantages Natives since colonists first settled in the US. This map highlights how more work needs to be done to educate and empower Native communities so they are given the resources needed to succeed financially. 
+In no state to Native Americans boast a higher median income than White Americans, likely due to systemic racism that has disadvantages Natives since colonists first settled in the US. Even the state with the highest Native American median household income is less than half of the highest White American median household income. The maps and charts highlight how more work needs to be done to educate and empower Native communities so they are given the resources needed to succeed financially. 
 
 
 
