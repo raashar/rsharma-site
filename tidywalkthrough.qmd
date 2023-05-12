@@ -236,8 +236,19 @@ Now, we'll go ahead and use the ggplot2 and ggthemes packages to create charts d
 
 This is so we can have a uniform scale for both charts to compare them better.
 
-```{r}
-
+```{r native_plot}
+native_plot = native_10 %>%
+  ggplot(aes(x = reorder(NAM, median_income), y = median_income)) + 
+  geom_col(fill = "#9ebcda") +
+  coord_flip() + 
+  xlab("State") +
+  ylab("Median Household Income (dollars)") +
+  labs(title = "States with the Highest Median Household Income for Native Americans",
+       subtitle = 2021,
+       caption = "Source: ACS 5 via tidycensus") +
+  theme_clean() + 
+  theme(plot.title=element_text(size=12)) + 
+  ylim(0, 160000)
 ```
 
 
