@@ -207,6 +207,40 @@ us_white_map
 
 Right off the bat, we can see that Native Americans do not make as much as White Americans. By setting the maps to the same scales, we are able to tell as much from the colors alone. No state shows Native Americans having a median household income of $80,000 or above. 
 
+# Highlighting Key Data with Charts
+
+In addition to using maps to visualize income inequality, we can use charts to further highlight these disparities. The following code takes the dataframes us_native_income and us_white_income and arranges median_income by descending order, using the arrange() function. Then, the head() function takes the top 10 median incomes only. We'll use these new dataframe for the charts.
+
+```{r chart prep}
+
+native_10 = us_native_income %>%
+  arrange(desc(median_income)) %>%
+  head(10)
+
+white_10 = us_white_income %>%
+  arrange(desc(median_income)) %>%
+  head(10)
+
+```
+
+# Making the Charts
+
+Now, we'll go ahead and use the ggplot2 and ggthemes packages to create charts displaying the top 10 median household incomes for both Native Americans and White Americans. 
+
+- In the ggplot() argument, we assign NAM (the state names) to x and median_income to y. The reorder function allows us to arrange by highest to lowest median income. 
+- geom_col() creates a bar chart
+- coord_flip() flips the x and y axes
+- xlab() labels the x axis with "State"
+- ylab() labels the y axis with "Median Household Income (dollars)"
+- ylim() sets the y axis labels between 0 dollars and 160,000 dollars. 
+
+This is so we can have a uniform scale for both charts to compare them better.
+
+```{r}
+
+```
+
+
 # Conclusions 
 
 Now we can really see how White households in states like Washington, Minnesota, and Colorado (in addition to others) often make well over 80,000 dollars per year, while most Native American households don't bring in more than 65,000 dollars per year. Even in Alaska, the state with the largest proportion of Natives, we see White Americans bringing in a median household income of 87,920 dollars, while Native Alaskans bring in a median household income of 53,061 dollars.
