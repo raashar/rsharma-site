@@ -82,30 +82,51 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./academic.html">
- <span class="menu-text">Academic Work</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-my-work" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">My Work</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-my-work">    
+        <li>
+    <a class="dropdown-item" href="./academic.html">
+ <span class="dropdown-text">Academic Work</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html">
- <span class="menu-text">Portfolio</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Portfolio</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-portfolio">    
+        <li>
+    <a class="dropdown-item" href="./portfolio.html">
+ <span class="dropdown-text">Articles</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./walkthrough.html">
- <span class="menu-text">Analysis Walkthrough Example</span></a>
+        <li>
+    <a class="dropdown-item" href="./breaking.html">
+ <span class="dropdown-text">Sample Breaking News Story</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./electionproj.html">
- <span class="menu-text">Election Project (Mapmaking)</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-walkthroughs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">R Walkthroughs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-walkthroughs">    
+        <li>
+    <a class="dropdown-item" href="./walkthrough.html">
+ <span class="dropdown-text">Sample Walkthrough</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./tidywalkthrough.html">
- <span class="menu-text">Using R to Visualize Income Inequality: A Walkthrough</span></a>
+        <li>
+    <a class="dropdown-item" href="./electionproj.html">
+ <span class="dropdown-text">Election Project</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./breaking.html">
- <span class="menu-text">Sample Breaking News Story</span></a>
+        <li>
+    <a class="dropdown-item" href="./tidywalkthrough.html">
+ <span class="dropdown-text">Income Inequality Project</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->

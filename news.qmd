@@ -1,16 +1,15 @@
 ---
-title: "Portfolio"
+title: "Long-form News Story"
+editor: visual
 ---
 
-## My Work
-
-### News Story
+# **Distance Learning Story**
 
 *In my News Writing and Reporting class, I wrote a story about the experience of international students studying during virtual school in the 2020-2021 academic year at GW.*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+------------------------------------------------------------------------
 
-**Remote learning proves challenging for international students at The George Washington University**
+## Remote learning proves challenging for international students at The George Washington University
 
 In Dubai, GW freshman Nour Ellahham goes to sleep at 5 a.m. and wakes up at 10 a.m. Gulf Standard Time to attend classes. One and a half hours ahead of her in Hyderabad, Ajay Uppaluri "passes out" after completing schoolwork from 4:30 a.m. to 10 a.m. Indian Standard Time.  
 
@@ -20,7 +19,7 @@ Ellahham, a freshman majoring in political science at GWU, began her first year 
 
 "If I could describe my online learning experience in one word, I would definitely say frustrating," Ellahham said.
 
-One of about [4,000 international students at the university](https://irp.gwu.edu/dashboard-enrollment-dashboard), Ellahham restructured her entire schedule to attend five classes a week, all of which are synchronous, or live.
+One of about [4,000](https://irp.gwu.edu/dashboard-enrollment-dashboard) international students at the university, Ellahham restructured her entire schedule to attend five classes a week, all of which are synchronous, or live.
 
 "I don't really have a routine anymore. It's confusing when my brain is in Eastern Standard Time, but my body is in Gulf Standard Time. I never know when I should be working or sleeping," Ellahham said.
 
@@ -36,7 +35,7 @@ After studying throughout the week, Uppaluri can only visit his grandparents on 
 
 "I don't have balance. I push myself...It's this weird middle ground, which is not fun. I don't enjoy it," Uppaluri said.
 
-Fewer international students are attending U.S. schools because of the pandemic and the challenge of online learning. The enrollment of new international students into U.S. institutions fell 43% from 2019, [according to a survey conducted by the Institute of International Education](https://www.iie.org/Research-and-Insights/Open-Doors/Fall-International-Enrollments-Snapshot-Reports).
+Fewer international students are attending U.S. schools because of the pandemic and the challenge of online learning. The enrollment of new international students into U.S. institutions fell 43% from 2019, according to a [survey](https://www.iie.org/Research-and-Insights/Open-Doors/Fall-International-Enrollments-Snapshot-Reports) conducted by the Institute of International Education.
 
 To maintain participation among enrolled international students, professors at GWU have made adjustments to accommodate their unique schedules. While some conduct synchronous lectures, others give international students the option to learn asynchronously, or on their own time.  
 
@@ -54,24 +53,3 @@ International students praised the accommodations professors have provided.
 
 Uppaluri offered advice to other international GWU students learning virtually. "Try to manage your time as much as you can and speak to your professors. They are super understanding and want to help you," Uppaluri said.
 
-### Borgen Project Articles
-
-![](borgen-logo.jpg)
-
-*As an intern for the Borgen Project, an organization dedicated to ending global poverty, I wrote articles for both Borgen Magazine and the Borgen Project's blog on global issues and efforts being made to eradicate poverty in various countries.*
-
--   [The Impact of COVID-19 on Poverty in Mongolia](https://borgenproject.org/tag/impact-of-covid-19-on-poverty-in-mongolia/)
-
--   [How Children of Vietnam Helps Fight Poverty](https://www.borgenmagazine.com/children-of-vietnam/)
-
--   [House Resolution Hopes to Fight COVID-19 and Poverty in Africa](https://www.borgenmagazine.com/covid-19-and-poverty-in-africa/)
-
--   [The RENACER Act is Supporting Human Rights in Nicaragua](https://www.borgenmagazine.com/renacer-act/)
-
--   [How Organizations are Fighting the Education Crisis in Yemen](https://www.borgenmagazine.com/education-crisis-in-yemen/)
-
--   [How Sen. Cory Booker is Supporting Women in Developing Countries](https://www.borgenmagazine.com/supporting-women-in-developing-countries/)
-
--   [4 Organizations Helping Women in Asia](https://borgenproject.org/women-in-asia/)
-
--   [The Impact of COVID-19 on Poverty in Afghanistan](https://borgenproject.org/the-impact-of-covid-19-on-poverty-in-afghanistan/)

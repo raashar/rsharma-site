@@ -13,12 +13,26 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - academic.qmd
-      - portfolio.qmd
-      - walkthrough.qmd
-      - electionproj.qmd
-      - tidywalkthrough.qmd
-      - breaking.qmd
+      - text: My Work
+        menu: 
+          - academic.qmd
+      - text: Portfolio 
+        menu: 
+        - text: Articles
+          file: articles.qmd
+        - text: Distance Learning Story
+          file: news.qmd
+        - text: Sample Breaking News Story
+          file: breaking.qmd
+      - text: R Walkthroughs
+        menu: 
+        - text: Sample Walkthrough
+          file: walkthrough.qmd
+        - text: Election Project
+          file: electionproj.qmd
+        - text: Income Inequality Project
+          file: tidywalkthrough.qmd
+      
       
 
 
