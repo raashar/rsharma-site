@@ -15,23 +15,24 @@ website:
         text: Home
       - text: My Work
         menu: 
-          - academic.qmd
+        - href: academic.qmd
+          text: Academic Work
       - text: Writing Portfolio 
         menu: 
-        - text: Articles
-          file: articles.qmd
-        - text: Distance Learning Story
-          file: news.qmd
-        - text: Sample Breaking News Story
-          file: breaking.qmd
+        - href: articles.qmd
+          text: Articles
+        - href: news.qmd
+          text: Distance Learning Story
+        - href: breaking.qmd
+          text: Sample Breaking News Story
       - text: R Walkthroughs
         menu: 
-        - text: Sample Walkthrough
-          file: walkthrough.qmd
-        - text: Election Project
-          file: electionproj.qmd
-        - text: Income Inequality Project
-          file: tidywalkthrough.qmd
+        - href: walkthrough.qmd
+          text: Sample Walkthrough
+        - href: electionproj.qmd
+          text: Election Project
+        - href: tidywalkthrough.qmd
+          text: Income Inequality Project
       
       
 
