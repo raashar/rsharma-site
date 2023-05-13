@@ -1,0 +1,154 @@
+---
+title: "Election Project (Mapmaking)"
+author: "Riya Sharma, based on a lecture by Aaron Kessler"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+---
+
+
+# Getting Started 
+
+Today, we're going to learn how to make interactive maps in R using the mapview package. We'll be visualizing election results for Virginia governor and president. The data are broken down by county level. 
+
+First off, we'll need to load our packages and our election data. 
+
+
+```{r setup, warning=FALSE, message=FALSE}
+library(sf)
+library(mapview)
+library(tmap)
+library(tmaptools)
+library(htmltools)
+library(rmapshaper)
+library(tigris)
+library(tidycensus)
+library(writexl)
+library(jsonlite)
+options(tigris_class = "sf")
+library(tidyverse)
+library(janitor)
+library(kableExtra)
+library(here)
+options(scipen = 999)
+options(stringsAsFactors = FALSE)
+
+
+#load saved joined data file from previous script
+joined_vacomparison <- readRDS(here("processed_data", "joined_vacomparison.rds"))
+
+
+
+```
+
+
+
+# Comparing Election Results for Virginia Governor and President
+
+Now, we'll take a look at the data:
+
+
+
+```{r}
+
+head(joined_vacomparison)
+
+
+```
+
+Now, we're creating some new variables for analysis: 
+
+- mc_overperform is the percentage by which McAuliffe overperformed Biden
+- dem_gov_margin is the percentage by which McAuliffe won over Youngkin
+- rep_gov_margin is the percentage by which Youngkin won over McAuliffe
+- dem_pres_margin is the percentage by which Biden won over Trump
+- rep_pres_margin is the percentage by which Trump won over Biden
+
+
+
+```{r}
+joined_vacomparison = joined_vacomparison %>%
+  mutate(
+    mc_overperform = pct_mcauliffe - biden_pct,
+    dem_gov_margin = pct_mcauliffe - pct_youngkin,
+    rep_gov_margin = pct_youngkin - pct_mcauliffe,
+    dem_pres_margin = biden_pct - trump_pct,
+    rep_pres_margin = trump_pct - biden_pct
+  )
+```
+
+
+## Visualizing the areas in which Democrats won by a higher margin (Governor)
+ 
+To see where McAuliffe won over Youngkin, we'll first need to attach geometries to the VA dataset. This will allow us to make interactive maps. 
+
+To do so, we'll use the tigris package to get the geometries for Virginia counties and join that to our VA dataset. 
+
+I also used the janitor package to round the percentages so they are a bit cleaner and easier to understand.
+
+
+```{r}
+va_counties_geo <- tigris::counties(state = "VA", resolution = "20m", cb = TRUE)
+
+va_counties_geo$NAMELSAD = toupper(va_counties_geo$NAMELSAD)
+
+va_elections_sf = va_counties_geo %>%
+  left_join(. , joined_vacomparison, by=c("NAMELSAD"="locality"))
+
+va_elections_sf = va_elections_sf %>% mutate(
+    dem_gov_margin = janitor::round_half_up(dem_gov_margin, 2)
+  )
+
+va_elections_sf = va_elections_sf %>% mutate(
+    dem_pres_margin = janitor::round_half_up(dem_pres_margin, 2)
+  )
+```
+
+
+Now, we'll actually make a map of the Democratic margins for Governor. 
+
+We'll first make a label using the glue and htmltools packages. This will show the county name and margin by which McAuliffe won (or lost) compared to Youngkin. We'll need the dem_gov_margin variable to do so. 
+
+
+```{r}
+
+mylabel1 = glue::glue("<strong>{va_elections_sf$NAMELSAD}</strong><br />
+                      Democratic Margin for Governor: {va_elections_sf$dem_gov_margin}<br />") %>% 
+  lapply(htmltools::HTML)
+
+map1 = mapview(va_elections_sf, zcol = "dem_gov_margin",
+               col.regions = RColorBrewer::brewer.pal(9, "PuBuGn"),
+               alpha.regions = 1,
+               label = mylabel1,
+               legend = F)
+map1
+```
+
+
+This map helps us visualize how different counties vote very differently. While some pockets in the state's center, North, and East regions overwhelmingly voted for the Democratic candidate for Governor, a majority chose the Republican candidate.
+
+## Visualizing the areas in which Democrats won by a higher margin (President)
+
+Now, we'll do the same and make a map of the Democratic margins for President.
+
+
+```{r}
+
+mylabel2 = glue::glue("<strong>{va_elections_sf$NAMELSAD}</strong><br />
+                      Democratic Margin for President: {va_elections_sf$dem_pres_margin}<br />") %>% 
+  lapply(htmltools::HTML)
+
+map2 = mapview(va_elections_sf, zcol = "dem_pres_margin",
+               col.regions = RColorBrewer::brewer.pal(9, "PuBuGn"),
+               alpha.regions = 1,
+               label = mylabel2,
+               legend = F)
+map2
+```
+
+
+Here, we see the results largely mirror those for Governor. However, we see some counties (in the Southeast, particularly) have a greater Democratic margin for President than for Governor. 
+
+

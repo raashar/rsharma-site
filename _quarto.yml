@@ -42,6 +42,7 @@ format:
     theme: minty
     css: styles.css
     toc: true
+    self-contained: true
 
 
 
