@@ -4,7 +4,7 @@ title: "Academic Work"
 
 ## Writing
 
-#### **Objectivity in Journalism: An Analysis of Reporting Racial \[In\]Justice**
+### **Objectivity in Journalism: An Analysis of Reporting Racial \[In\]Justice**
 
 *This is a paper I wrote which discusses objectivity in journalism through the lenses of advocacy journalism, campaign journalism, and the purported ideal of scientific objectivity in reporting.*
 
@@ -70,7 +70,9 @@ Tuchman, Gaye. "Objectivity as Strategic Ritual: An Examination of Newsmen's Not
 
 Wells, Ida B. The Requirements of Southern Journalism. 16 Jan. 2020, commonreader.wustl.edu/c/the-requirements-of-southern-journalism/.
 
-#### **Standing on a Stalled Escalator: The Impact of Race on the Mobility of Black Americans and African Americans Within the Workplace**
+------------------------------------------------------------------------
+
+### **Standing on a Stalled Escalator: The Impact of Race on the Mobility of Black Americans and African Americans Within the Workplace**
 
 *This is a paper I wrote examining the issue of discrimination in and out of the workplace for Black and African Americans in the US. I presented my findings at the Spring 2021 University Writing and Research Conference.*
 
