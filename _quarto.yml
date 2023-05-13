@@ -16,7 +16,7 @@ website:
       - text: My Work
         menu: 
           - academic.qmd
-      - text: Portfolio 
+      - text: Writing Portfolio 
         menu: 
         - text: Articles
           file: articles.qmd

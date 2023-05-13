@@ -1,9 +1,7 @@
 ---
-title: "Long-form News Story"
+title: "Distance Learning Story"
 editor: visual
 ---
-
-# **Distance Learning Story**
 
 *In my News Writing and Reporting class, I wrote a story about the experience of international students studying during virtual school in the 2020-2021 academic year at GW.*
 
